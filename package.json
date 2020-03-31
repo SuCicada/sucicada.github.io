@@ -9,7 +9,7 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.2.0"
+    "version": "3.9.0"
   },
   "dependencies": {
     "darkmode-js": "^1.5.5",
