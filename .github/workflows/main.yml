@@ -60,8 +60,8 @@ jobs:
           # "https://${{ secrets.CODING_ACCESS_TOKEN_USERNAME }}:${{ secrets.CODING_ACCESS_TOKEN }}@${{ env.CODING_REPO }}"
           repos=(
             "https://oauth2:${{ secrets.GITHUB_TOKEN }}@${{ env.GITHUB_REPO }}"
-            "https://oauth2:${{ secrets.GITEE_ACCESS_TOKEN }}@${{ env.GITEE_REPO }}"
-               https://wMMuysAZwz:f07c21ca0e02e5cf91f48f729c3281a9dff50ff9@e.coding.net/SuCicada/blog/hexo.git
+            "https://SuCicada:${{ secrets.GITEE_ACCESS_TOKEN }}@${{ env.GITEE_REPO }}"
+             https://wMMuysAZwz:f07c21ca0e02e5cf91f48f729c3281a9dff50ff9@e.coding.net/SuCicada/blog/hexo.git
           )
           for repo in ${repos[@]};do
             echo start push $repo
