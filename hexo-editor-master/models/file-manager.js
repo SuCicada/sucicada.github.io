@@ -1,7 +1,7 @@
 'use strict';
 const fs = require('hexo-fs');
 const Article = require('./article');
-const suffix = '.md';
+const suffix = 'test.md';
 
 class Manager {
 

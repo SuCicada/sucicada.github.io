@@ -1,6 +1,6 @@
 name: Deploy Blog
 
-on: [push] # 当有新push时运行
+on: [ push ] # 当有新push时运行
 
 env:
   TZ: Asia/Shanghai
@@ -14,33 +14,50 @@ jobs:
       - name: Checkout # 将仓库内master分支的内容下载到工作目录
         uses: actions/checkout@v1 # 脚本来自 https://github.com/actions/checkout
 
-      - name: Use Node.js 14.x # 配置Node环境
+      - name: Setup node
+        # 配置Node环境
         uses: actions/setup-node@v1 # 配置脚本来自 https://github.com/actions/setup-node
         with:
           node-version: "14.x"
 
-      - name: Setup Hexo env
+      - name: Cache node modules
+        # 設置包緩存目錄，避免每次下載
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install hexo dependencies
+      # 下載 hexo-cli 腳手架及相關安裝包
+        run: |
+          npm install hexo-cli gulp -g
+          npm install
+
+      - name: Generate files
+        # 編譯 markdown 文件
+        run: |
+          hexo clean
+          hexo generate
+
+      - name: Execute gulp task
+        run: gulp
+
+      - name: Deploy hexo blog
         env:
-          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }} # 这里是上面WinterChenS.github.io新增的公钥：HEXO_DEPLOY_KEY
+          # Github 倉庫
+          GITHUB_REPO: github.com/SuCicada/sucicada.github.io
+          # Coding 倉庫
+          CODING_REPO: e.coding.net/yifanzheng/blogs.git
+          # Gitee 倉庫
+          GITEE_REPO: gitee.com/SuCicada/sucicada.git
+        # 將編譯後的博客文件推送到指定倉庫
         run: |
-          # set up private key for deploy
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa # 配置秘钥
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          # set git infomation
-          git config --global user.name 'SuCicada' # 换成你自己的邮箱和名字
-          git config --global user.email '1054171802@qq.com'
-          # install dependencies
-          npm i -g hexo-cli # 安装hexo
-          npm i
-          # 拉取主题代码
-          rm -rf themes/*
-          git clone https://github.com/WinterChenS/hexo-theme-diaspora.git themes/diaspora
-
-
-      - name: Deploy
-        run: |
-          # publish
-          hexo generate && hexo deploy # 执行部署程序
+          cd ./public && git init && git add .
+          git config user.name "SuCicada"
+          git config user.email "1054171802@qq.com"
+          git add .
+          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@$GITHUB_REPO" master:master
+          git push --force --quiet "https://oauth2:${{ secrets.CODING_ACCESS_TOKEN }}@$CODING_REPO" master:master
+          git push --force --quiet "https://oauth2:${{ secrets.GITEE_ACCESS_TOKEN }}@$GITEE_REPO" master:master
 

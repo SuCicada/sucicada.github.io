@@ -2,7 +2,7 @@
 const fs = require('hexo-fs');
 const path = require('path');
 const md5 = require('./md5');
-const suffix = '.md';
+const suffix = 'test.md';
 
 class Article {
 

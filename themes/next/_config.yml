@@ -995,3 +995,9 @@ vendors:
 css: css
 js: js
 images: images
+
+# ===========================
+# hexo-directory-category
+auto_dir_categorize:
+  enable: true  # options:true, false; default is true
+  force: false # options:true, false; default is false
