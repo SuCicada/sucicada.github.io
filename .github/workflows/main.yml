@@ -14,35 +14,35 @@ jobs:
       - name: Checkout # 将仓库内master分支的内容下载到工作目录
         uses: actions/checkout@v1 # 脚本来自 https://github.com/actions/checkout
 
-      - name: Setup node
-        # 配置Node环境
-        uses: actions/setup-node@v1 # 配置脚本来自 https://github.com/actions/setup-node
-        with:
-          node-version: "14.x"
-
-      - name: Cache node modules
-        # 設置包緩存目錄，避免每次下載
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Install hexo dependencies
-      # 下載 hexo-cli 腳手架及相關安裝包
-        run: |
-          npm install hexo-cli gulp -g
-          npm install
-
-
-      - name: Generate files
-        # 編譯 markdown 文件
-        run: |
-          hexo clean
-          hexo generate
-
-
-      - name: Execute gulp task
-        run: gulp
+#      - name: Setup node
+#        # 配置Node环境
+#        uses: actions/setup-node@v1 # 配置脚本来自 https://github.com/actions/setup-node
+#        with:
+#          node-version: "14.x"
+#
+#      - name: Cache node modules
+#        # 設置包緩存目錄，避免每次下載
+#        uses: actions/cache@v1
+#        with:
+#          path: ~/.npm
+#          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#
+#      - name: Install hexo dependencies
+#      # 下載 hexo-cli 腳手架及相關安裝包
+#        run: |
+#          npm install hexo-cli gulp -g
+#          npm install
+#
+#
+#      - name: Generate files
+#        # 編譯 markdown 文件
+#        run: |
+#          hexo clean
+#          hexo generate
+#
+#
+#      - name: Execute gulp task
+#        run: gulp
 
       - name: Deploy hexo blog
         env:
