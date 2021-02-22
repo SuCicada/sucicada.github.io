@@ -8,3 +8,4 @@ npm install https://github.com/CodeFalling/hexo-asset-image --save
 npm install hexo-enhancer --save
 
  
+ 
