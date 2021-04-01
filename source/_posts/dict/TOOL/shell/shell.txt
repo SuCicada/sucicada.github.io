@@ -1,0 +1,30 @@
+SHELL脚本中取得域名的IP地址
+
+```
+#!/bin/sh
+
+if [ $# -lt 1 ]; then
+        echo $0 need a parameter
+        exit 0
+fi
+
+ADDR=$1
+
+TMPSTR=`ping ${ADDR} -c 1 | sed '1{s/[^(]*(//;s/).*//;q}'`
+
+echo ${TMPSTR}
+```
+
+参数解析
+```
+while getopts "s:" arg; do #选项后面的冒号表示该选项需要参数
+    case $arg in
+    s)
+        sp="-s $OPTARG"
+        ;;
+    ?) #当有不认识的选项的时候arg为?
+        echo "unkonw argument"
+        ;;
+    esac
+done
+```
