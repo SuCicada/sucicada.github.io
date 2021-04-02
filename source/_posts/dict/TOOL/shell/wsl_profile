@@ -1,0 +1,55 @@
+export DISPLAY=win.ip:0
+
+#utils
+source utils.sh
+winip(){
+    echo `cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
+}
+#export TERM=xterm-color
+
+
+sethosts(){
+    hosts=$1
+    ip=$2
+    host=$3
+    tmp=~/share/hosts-`date +%s`
+    #echo grep $host $hosts \| wc -l
+#    if [ `grep $host $hosts | wc -l` -gt 0 ];then
+    cp $hosts $tmp
+    dos2unix -q $tmp
+    sed -i "/${host}/d" $tmp
+ #   else
+   #     echo $hosts
+  #  fi
+    echo '' >> $tmp
+    echo "$ip $host" >> $tmp
+    sed -i '/^\s*$/d' $tmp
+    #cat $tmp | sudo tee  $hosts
+    sudo cp $tmp $hosts
+    echo "$ip $host --> $hosts"
+}
+wsl_ip=`ifconfig eth0 | awk '/inet /{print substr($2,1)}'`
+wsl_host=ubuntu.wsl2
+wsl_hosts=/etc/hosts
+win_ip=`winip`
+win_host=win.ip
+win_hosts=/mnt/c/Windows/System32/drivers/etc/hosts
+echo sucicada | sudo  -S -v
+sethosts $win_hosts $wsl_ip $wsl_host
+sethosts $win_hosts $win_ip $win_host
+sethosts $wsl_hosts $wsl_ip $wsl_host
+sethosts $wsl_hosts $win_ip $win_host
+
+sudo service ssh start
+if test -f /run/nologin;then
+sudo mv /run/nologin /run/nologin.bak
+fi
+echo
+
+#export PATH=$PATH:"/mnt/c/Program Files/qemu"
+
+PS1="\[\033[1;32;01m\]\u\[\033[00m\]\[\033[1;34;01m\]@\[\033[00m\]\[\033[1;32;01m\]\h\[\033[00m\]\[\033[34;01m\]:\[\033[00m\]\[\033[33;01m\]\w\[\033[00m\]\[\033[31;01m\] \$\[\033[37;00m\] "
+
+function catjp(){
+    cat $1 | iconv -f shift-jis -t UTF-8 -o $1
+    }
