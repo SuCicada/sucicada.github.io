@@ -18,7 +18,7 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: https://sucicada.github.io
 root: /
-permalink: :title.md/
+permalink: :hash/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -110,3 +110,6 @@ deploy:
 search:
   path: search.xml
   field: post
+
+marked:
+  - smartypants: false
