@@ -35,12 +35,14 @@ echo '{"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]}' | sudo tee /
 ```
 sudo -v
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt install -y nodejs
 
 echo -e "
 echo deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_14.x focal main 
 echo deb-src https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_14.x focal main 
 "| tee /etc/apt/sources.list.d/nodesource.list
+sudo apt install -y nodejs
+npm config set registry https://registry.npm.taobao.org
+
 ```
 
 ### scala
