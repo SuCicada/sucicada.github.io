@@ -11,3 +11,6 @@ npm install hexo-enhancer --save
 npm uninstall hexo-prisim-plugin
 
 https://blog.csdn.net/Calvin_zhou/article/details/109303640
+
+todo
+- gulp 对于歌词模板有问题
