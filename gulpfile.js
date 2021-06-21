@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var minifycss = require('gulp-minify-css');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel');
 var htmlmin = require('gulp-htmlmin');
 var htmlclean = require('gulp-htmlclean');
@@ -9,8 +10,9 @@ var imagemin = require('gulp-imagemin');
 // 压缩 html
 gulp.task('minify-html', function() {
     return gulp.src('./public/**/*.html')
-        .pipe(htmlclean())
+        // .pipe(htmlclean())
         .pipe(htmlmin({
+            collapseWhitespace:false,
             removeComments: true,
             minifyJS: true,
             minifyCSS: true,
@@ -29,9 +31,9 @@ gulp.task('minify-css', function() {
 // 压缩 js
 gulp.task('minify-js', function() {
     return gulp.src('./public/js/**/*.js')
-        .pipe(babel({
-            presets: ['es2015']
-        }))
+        // .pipe(babel({
+        //     presets: ['es2015']
+        // }))
         .pipe(uglify())
         .pipe(gulp.dest('./public'));
 });
@@ -50,6 +52,6 @@ gulp.task('minify-images', function() {
 gulp.task('default', gulp.parallel(
     'minify-html'
     ,'minify-css'
-    // ,'minify-js'
-    // ,'minify-images'
+    ,'minify-js'
+    ,'minify-images'
 ));
