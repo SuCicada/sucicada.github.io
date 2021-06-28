@@ -2,7 +2,7 @@
 <lyrics hidden>
 {{Photrans2/button}}
 {{color_block|red}} 佐仓杏子 {{color_block|blue}} 美树沙耶香 {{color_block|#DA70D6}} 合唱
-{{LyricsKai|lstyle=color:#CC00FF|rstyle=color:#CC00FF|reserveWidth=360px
+{{LyricsKai|lstyle=color:#CC00FF|rstyle=color:#CC00FF|reserveWidth=0px
 |original=
 {{color|red|{{Photrans2|錆|さ}}び{{Photrans2|付|つ}}いた{{Photrans2|心|こころ}}、}}
 {{color|red|{{Photrans2|音|おと}}もない{{Photrans2|世界|せかい}}、}}
