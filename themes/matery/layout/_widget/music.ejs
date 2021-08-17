@@ -28,6 +28,9 @@
 
     <%}%>
 </style>
+<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.aplayer) %>"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
 <div class="<% if(!theme.music.fixed) { %>music-player<% } %>">
     <% if (!theme.music.fixed && theme.music.title.enable) { %>
         <div class="title center-align">
@@ -51,6 +54,3 @@
         </meting-js>
     </div>
 </div>
-
-<script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.aplayer) %>"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>

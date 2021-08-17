@@ -16,12 +16,13 @@ menu:
   About:
     url: /about
     icon: fas fa-user-circle
-  Contact:
-    url: /contact
-    icon: fas fa-comments
-  Friends:
-    url: /friends
-    icon: fas fa-address-book
+  #  Contact:
+  #    url: /contact
+  #    icon: fas fa-comments
+  #  Friends:
+  #    url: /friends
+  #    icon: fas fa-address-book
+
   # 二级菜单写法如下
   #Medias:
   #  icon: fas fa-list
@@ -66,8 +67,22 @@ cover:
 dream:
   enable: true
   showTitle: true
-  title: 我的梦想
-  text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+  title: Cyborg Paradisum
+  text:
+
+# 打字效果副标题.
+# 如果有符号 ‘ ，请在 ’ 前面加上 \
+subtitle:
+  enable: true
+  loop: true # 是否循环
+  showCursor: true # 是否显示光标
+  startDelay: 300 # 开始延迟
+  typeSpeed: 100 # 打字速度
+  backSpeed: 50 # 删除速度
+  sub:
+    - 我渴望脱离非理性之苦海。
+    - 我意欲见识理性之光与感性之美。
+#    - Never really desperate, only the lost of the soul
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -79,7 +94,7 @@ music:
   autoHide: true    # hide automaticaly
   server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
   type: playlist    #require song, playlist, album, search, artist
-  id: 503838841     #require	song id / playlist id / album id / search keyword
+  id: 6919237370     #require	song id / playlist id / album id / search keyword
   fixed: true       # 开启吸底模式
   autoplay: false   # 是否自动播放
   theme: '#42b983'
@@ -116,7 +131,7 @@ recommend:
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
-favicon: /favicon.png
+favicon: /images/logo.png
 logo: /images/logo.png
 
 # The configuration of the second button in the home banner,
@@ -132,7 +147,7 @@ indexbtn:
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  https://github.com/SuCicada
+  github: https://github.com/SuCicada
   email: 1054171802@qq.com
   facebook: # https://www.facebook.com/xxx
   twitter: # https://twitter.com/xxx
@@ -203,9 +218,9 @@ clicklove:
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
-  avatar: /medias/avatar.jpg
-  career: Software Engineer
-  introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
+  avatar: /images/face.jpg
+  career: 现实粉碎者，二次元居民，斯多葛追随者
+  introduction:
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
@@ -219,15 +234,15 @@ myProjects:
       url: http://github.com/blinkfox/hexo-theme-matery
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
     Fenix:
-        icon: fas fa-database
-        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/fenix
-        desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
+      icon: fas fa-database
+      iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+      url: https://github.com/blinkfox/fenix
+      desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
     typora-vue-theme:
-        icon: fas fa-file-alt
-        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
-        desc: This is a typora theme inspired by Vue document style.
+      icon: fas fa-file-alt
+      iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
+      url: https://github.com/blinkfox/typora-vue-theme
+      desc: This is a typora theme inspired by Vue document style.
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -443,30 +458,30 @@ libs:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
-- /medias/featureimages/0.jpg
-- /medias/featureimages/1.jpg
-- /medias/featureimages/2.jpg
-- /medias/featureimages/3.jpg
-- /medias/featureimages/4.jpg
-- /medias/featureimages/5.jpg
-- /medias/featureimages/6.jpg
-- /medias/featureimages/7.jpg
-- /medias/featureimages/8.jpg
-- /medias/featureimages/9.jpg
-- /medias/featureimages/10.jpg
-- /medias/featureimages/11.jpg
-- /medias/featureimages/12.jpg
-- /medias/featureimages/13.jpg
-- /medias/featureimages/14.jpg
-- /medias/featureimages/15.jpg
-- /medias/featureimages/16.jpg
-- /medias/featureimages/17.jpg
-- /medias/featureimages/18.jpg
-- /medias/featureimages/19.jpg
-- /medias/featureimages/20.jpg
-- /medias/featureimages/21.jpg
-- /medias/featureimages/22.jpg
-- /medias/featureimages/23.jpg
+  - /medias/featureimages/0.jpg
+  - /medias/featureimages/1.jpg
+  - /medias/featureimages/2.jpg
+  - /medias/featureimages/3.jpg
+  - /medias/featureimages/4.jpg
+  - /medias/featureimages/5.jpg
+  - /medias/featureimages/6.jpg
+  - /medias/featureimages/7.jpg
+  - /medias/featureimages/8.jpg
+  - /medias/featureimages/9.jpg
+  - /medias/featureimages/10.jpg
+  - /medias/featureimages/11.jpg
+  - /medias/featureimages/12.jpg
+  - /medias/featureimages/13.jpg
+  - /medias/featureimages/14.jpg
+  - /medias/featureimages/15.jpg
+  - /medias/featureimages/16.jpg
+  - /medias/featureimages/17.jpg
+  - /medias/featureimages/18.jpg
+  - /medias/featureimages/19.jpg
+  - /medias/featureimages/20.jpg
+  - /medias/featureimages/21.jpg
+  - /medias/featureimages/22.jpg
+  - /medias/featureimages/23.jpg
 
 # default configs that the default policy for every articles/posts
 # default 配置文章的默认转载规则
@@ -537,19 +552,6 @@ addthis:
   enable: false
   pubid:  # 前往https://www.addthis.com/获取
 
-# 打字效果副标题.
-# 如果有符号 ‘ ，请在 ’ 前面加上 \
-subtitle:
-  enable: true
-  loop: true # 是否循环
-  showCursor: true # 是否显示光标
-  startDelay: 300 # 开始延迟
-  typeSpeed: 100 # 打字速度
-  backSpeed: 50 # 删除速度
-  sub:
-    - 从来没有真正的绝境, 只有心灵的迷途
-    - Never really desperate, only the lost of the soul
-
 # 手机二级菜单.
 navMenu:
   mleft: false # 二级侧栏子菜单是否对齐左边
@@ -561,8 +563,19 @@ instantpage:
 
 # banner 是否每日切换.
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
+# 若指定了random， 则 img 失效
+# 若指定了 img, 则显示这个
 banner:
   enable: true
+  #  random: true
+  img: illust_71280729_20200705_194507.png
+  imgs:
+    - 0.jpg
+    - jina_2019_4.jpg
+    - illust_24500205_20200705_194426.jpg
+    - illust_70773681_20190815_224350.jpg
+    - illust_71280729_20200705_194507.png
+    - illust_76237636_20201105_223741.jpg
 
 #ICP备案信息尾部显示
 icp:
@@ -584,12 +597,12 @@ jsDelivr:
 
 # 网站背景图
 background:
-  enable: false
-  url: "https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
+  enable: true
+  url: medias/background.jpg
 
 # 说说 https://artitalk.js.org/
 artitalk:
-  enable: true
+  enable: false
   appId: # xxxxx
   appKey: # xxxxxx
 
@@ -608,7 +621,7 @@ artitalk:
 # 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI
 # 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com
 bbtime:
- enable: true
- appId: # 你的appId
- appKey: # 你的appKey
- serverURLs: # https://你的api
+  enable: true
+  appId: # 你的appId
+  appKey: # 你的appKey
+  serverURLs: # https://你的api

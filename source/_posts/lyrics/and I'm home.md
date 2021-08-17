@@ -1,3 +1,9 @@
+---
+top: true
+cover: true
+summary: 錆び付いた心、音もない世界、何を見てるの またねを言える顔を探すよ それを繰り返すだけ
+img: medias/banner/0.jpg
+---
 {% raw %}
 <lyrics hidden>
 {{Photrans2/button}}
