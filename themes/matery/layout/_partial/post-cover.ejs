@@ -36,3 +36,13 @@ if (page.img) {
         </div>
     </div>
 </div>
+<% if (page.background) { %>
+<style>
+    body{
+        background-image: url(<%= page.background%>);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+    }
+</style>
+<% } %>
