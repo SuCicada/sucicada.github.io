@@ -15,3 +15,6 @@ https://blog.inkuang.com/2021/405/
 
 todo
 - gulp 对于歌词模板有问题
+
+
+改一篇文章的解析代码，看 post.ejs

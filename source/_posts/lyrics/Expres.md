@@ -1,3 +1,6 @@
+---
+moelyrics: true
+---
 {% raw %}
 <lyrics hidden>
     <poem>
@@ -68,7 +71,7 @@
     </poem>
 
 </lyrics>
-<script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>
+<!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> -->
 <!--<script src="http://localhost:63210/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>-->
 {% endraw  %}
 [来源](https://zh.moegirl.org.cn/EXpres)

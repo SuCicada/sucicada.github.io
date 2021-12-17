@@ -5,7 +5,7 @@ summary: あわれみを下さい、堕ちた小鳥にそっと触れるよう�
         可哀想だと口に出して、靴の先で転がしても構わないわ、汚れててもいいからと、泥だらけの手を取って
 img: /images/ibegyou.jpg
 background: /images/ibegyou.jpg
-toc: false
+moelyrics: true
 ---
 
 {% raw %}
@@ -146,8 +146,8 @@ toc: false
     
 </lyrics>
 
-<script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>
-<!--<script src="http://localhost:63210/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>-->
+<!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> -->
+<!-- <script src="http://localhost:5501/dist/moelyrics.min.js"></script> -->
 {% endraw  %}
 
 [来源](https://zh.moegirl.org.cn/I_beg_you)

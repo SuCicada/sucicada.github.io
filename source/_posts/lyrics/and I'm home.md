@@ -4,6 +4,7 @@ cover: true
 summary: 錆び付いた心、音もない世界、何を見てるの またねを言える顔を探すよ それを繰り返すだけ
 img: medias/banner/0.jpg
 toc: false
+moelyrics: true
 ---
 {% raw %}
 <lyrics hidden>
@@ -101,7 +102,7 @@ toc: false
 }}
 
 </lyrics>
-<script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>
+<!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> -->
 <!--<script src="http://localhost:63210/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>-->
 {% endraw  %}
 [来源](https://zh.moegirl.org.cn/And_I'm_home)

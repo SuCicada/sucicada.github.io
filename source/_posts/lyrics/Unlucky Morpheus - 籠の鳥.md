@@ -2,6 +2,7 @@
 top: true
 cover: true
 toc: false
+moelyrics: true
 ---
 籠の鳥(かごのとり)
 歌：Unlucky Morpheus
@@ -104,5 +105,5 @@ toc: false
 
 
 </lyrics>
-<script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>
+<!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> -->
 {% endraw  %}
