@@ -93,3 +93,31 @@ jobs:
           gitee-repo: SuCicada/sucicada
           # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
           branch: master
+          
+      - name: send telegram message on success
+        if: success()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: | 
+            *[Build SUCCESS]* ${{ github.repository }}
+
+            Commit message: ${{ github.event.commits[0].message }}
+
+            [See Changes](https://github.com/${{ github.repository }}/commit/${{github.sha}})
+
+      - name: send telegram message on failure
+        if: failure()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            *[Build FAILURE]* ${{ github.repository }}
+
+            [See Error Log](https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}
