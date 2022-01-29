@@ -2,8 +2,8 @@ name: Deploy Blog
 
 on: [ push ] # 当有新push时运行
 
-env:
-  TZ: Asia/Shanghai
+#env:
+#  TZ: Asia/Shanghai
 
 jobs:
   build: # 一项叫做build的任务
@@ -102,7 +102,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: markdown
           disable_web_page_preview: true
-          message: | 
+          message: |
             *[Build SUCCESS]* ${{ github.repository }}
 
             Commit message: ${{ github.event.commits[0].message }}
