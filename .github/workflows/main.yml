@@ -21,12 +21,12 @@ jobs:
         with:
           node-version: "14.x"
 
-      - name: Cache node modules
-        # 設置包緩存目錄，避免每次下載
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#      - name: Cache node modules
+#        # 設置包緩存目錄，避免每次下載
+#        uses: actions/cache@v1
+#        with:
+#          path: ~/.npm
+#          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install hexo dependencies
         # 下載 hexo-cli 腳手架及相關安裝包
