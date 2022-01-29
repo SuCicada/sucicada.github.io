@@ -37,7 +37,7 @@ jobs:
       - name: Generate files
         # 編譯 markdown 文件
         run: |
-          hexo clean
+          hexo clean --debug
           hexo generate --debug
 
       #      - name: Execute gulp task
