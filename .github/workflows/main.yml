@@ -2,8 +2,8 @@ name: Deploy Blog
 
 on: [ push ] # 当有新push时运行
 
-#env:
-#  TZ: Asia/Shanghai
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   build: # 一项叫做build的任务
@@ -29,7 +29,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install hexo dependencies
-      # 下載 hexo-cli 腳手架及相關安裝包
+        # 下載 hexo-cli 腳手架及相關安裝包
         run: |
           npm install hexo-cli gulp -g
           npm install
@@ -40,8 +40,8 @@ jobs:
           hexo clean
           hexo generate --debug
 
-#      - name: Execute gulp task
-#        run: gulp
+      #      - name: Execute gulp task
+      #        run: gulp
 
       - name: Deploy hexo blog
         env:
@@ -69,18 +69,18 @@ jobs:
             echo success push $repo
           done
 
-#          git remote add origin "https://SuCicada:cf7bdfe1674796ad4c738e10bb567dc4@gitee.com/SuCicada/sucicada.git"
-#          git push -u origin master -f
-#      - name: Sync to Gitee
-#        uses: wearerequired/git-mirror-action@master
-#        env:
-#          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-#          SSH_PRIVATE_KEY: ${{ secrets.GIT_RSA_PRIVATE_KEY }}
-#        with:
-#          # 注意替换为你的 GitHub 源仓库地址
-#          source-repo: git@github.com:SuCicada/sucicada.github.io.git
-#          # 注意替换为你的 Gitee 目标仓库地址
-#          destination-repo: git@gitee.com:SuCicada/sucicada.git
+      #          git remote add origin "https://SuCicada:cf7bdfe1674796ad4c738e10bb567dc4@gitee.com/SuCicada/sucicada.git"
+      #          git push -u origin master -f
+      #      - name: Sync to Gitee
+      #        uses: wearerequired/git-mirror-action@master
+      #        env:
+      #          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+      #          SSH_PRIVATE_KEY: ${{ secrets.GIT_RSA_PRIVATE_KEY }}
+      #        with:
+      #          # 注意替换为你的 GitHub 源仓库地址
+      #          source-repo: git@github.com:SuCicada/sucicada.github.io.git
+      #          # 注意替换为你的 Gitee 目标仓库地址
+      #          destination-repo: git@gitee.com:SuCicada/sucicada.git
 
       # - name: Build Gitee Pages
       #   uses: yanglbme/gitee-pages-action@main
