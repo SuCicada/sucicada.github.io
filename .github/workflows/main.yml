@@ -56,7 +56,7 @@ jobs:
         run: |
           cd ./public && git init && git add .
           git config user.name "SuCicada"
-          git config user.email "1054171802@qq.com"
+          git config user.email "pengyifu@gmail.com"
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           # "https://SuCicada:${{ secrets.GITEE_ACCESS_TOKEN }}@${{ env.GITEE_REPO }}"
