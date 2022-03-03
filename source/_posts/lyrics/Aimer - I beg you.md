@@ -3,8 +3,8 @@ top: true
 cover: true
 summary: あわれみを下さい、堕ちた小鳥にそっと触れるような、かなしみを下さい、涙ぐんで、見下ろして、
         可哀想だと口に出して、靴の先で転がしても構わないわ、汚れててもいいからと、泥だらけの手を取って
-img: /images/ibegyou.jpg
-background-image: /images/ibegyou.jpg
+img: /images/lyrics/ibegyou.jpg
+background-image: /images/lyrics/ibegyou.jpg
 background-color: rgb(255 255 255 / 80%)
 moelyrics: true
 toc: false
