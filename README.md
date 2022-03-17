@@ -18,4 +18,6 @@ todo
 
 
 改一篇文章的解析代码，看 post.ejs
-a
+
+注意要用 5.4.0
+npm install hexo@5.4.0 -g

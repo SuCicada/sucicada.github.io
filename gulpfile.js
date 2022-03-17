@@ -18,7 +18,7 @@ gulp.task('minify-html', function() {
             minifyCSS: true,
             minifyURLs: true,
         }))
-        .pipe(gulp.dest('./public'))
+                                                                                                                                                                                                                                                                                                                                                                    .pipe(gulp.dest('./public'))
 });
 // 压缩 css
 gulp.task('minify-css', function() {
