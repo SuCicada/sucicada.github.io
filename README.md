@@ -21,3 +21,9 @@ todo
 
 注意要用 5.4.0
 npm install hexo@5.4.0 -g
+
+
+[//]: # (git submodule add git@github.com:SuCicada/hexo-theme-matery.git themes/matery/)
+
+git subtree add --prefix=themes/matery git@github.com:SuCicada/hexo-theme-matery.git matery
+
