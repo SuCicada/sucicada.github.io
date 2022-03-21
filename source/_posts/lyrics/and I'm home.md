@@ -2,7 +2,7 @@
 top: true
 cover: true
 summary: 錆び付いた心、音もない世界、何を見てるの またねを言える顔を探すよ それを繰り返すだけ
-img: medias/banner/0.jpg
+img: /images/lyrics/andimhome.jpg
 toc: false
 moelyrics: true
 ---
