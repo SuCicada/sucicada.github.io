@@ -23,7 +23,9 @@ todo
 npm install hexo@5.4.0 -g
 
 
-[//]: # (git submodule add git@github.com:SuCicada/hexo-theme-matery.git themes/matery/)
+git submodule add -b sucicada git@github.com:SuCicada/hexo-theme-matery.git themes/matery/
+git submodule update --remote
 
-git subtree add --prefix=themes/matery git@github.com:SuCicada/hexo-theme-matery.git matery
+[//]: # (git subtree add --prefix=themes/matery git@github.com:SuCicada/hexo-theme-matery.git matery)
 
+git clone git@github.com:SuCicada/sucicada.github.io --recurse-submodules -b source 
