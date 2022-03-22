@@ -3,9 +3,12 @@ top: true
 cover: true
 summary: 錆び付いた心、音もない世界、何を見てるの またねを言える顔を探すよ それを繰り返すだけ
 img: /images/lyrics/andimhome.jpg
+background-color: rgb(255 255 255 / 80%)
+background-dark-color: rgba(40, 44, 52, 0.8)
 toc: false
 moelyrics: true
 ---
+
 {% raw %}
 <lyrics hidden>
 {{Photrans2/button}}

@@ -10,12 +10,13 @@ moelyrics: true
 toc: false
 ---
 
+[I Beg You](https://zh.moegirl.org.cn/I_beg_you)
+
 {% raw %}
 
 <lyrics hidden>
     {{Photrans2/button}}
     {{LyricsKai
-    |width=900px
     |reserveWidth=0px
     |lstyle=color:#E00418;
     |rstyle=color:#1E0000
@@ -152,4 +153,3 @@ toc: false
 <!-- <script src="http://localhost:5501/dist/moelyrics.min.js"></script> -->
 {% endraw  %}
 
-[来源](https://zh.moegirl.org.cn/I_beg_you)
