@@ -12,11 +12,20 @@ jobs:
     runs-on: ubuntu-latest # 在最新版的Ubuntu系统下运行
 
     steps:
+#      - run: |
+#          git config --global http.sslVerify "false"
+#          git config --global https.sslVerify "false"
+#          git config --global --add http.proxy http://192.168.65.4:10809
+#          git config --global --add https.proxy http://192.168.65.4:10809
+
+#      - run: |
+#          sudo apt update && sudo apt install net-tools
+#          ifconfig
+
       - name: Checkout # 将仓库内master分支的内容下载到工作目录
-        uses: actions/checkout@v1 # 脚本来自 https://github.com/actions/checkout
+        uses: actions/checkout@v2 # 脚本来自 https://github.com/actions/checkout
         with:
           ref: source
-          ssh-key: ''
           submodules: recursive
 
       - name: Setup node
