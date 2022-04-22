@@ -1,8 +1,0 @@
-options:
-  lineNumbers: true
-  spellcheck: false
-  imagePath: /images/upload
-editor:
-  lineNumbers: true
-  inputStyle: contenteditable
-  spellcheck: false
