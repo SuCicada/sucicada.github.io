@@ -40,6 +40,9 @@
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
     "hexo-util": "^2.4.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+    "dateformat": "^5.0.3",
+    "js-yaml": "^4.1.0",
+    "x-date": "^1.0.2"
   }
 }

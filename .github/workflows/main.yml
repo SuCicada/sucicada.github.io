@@ -50,9 +50,9 @@ jobs:
 
       - name: Generate files
         # 編譯 markdown 文件
-        run: |
-          hexo clean --debug
-          hexo generate --debug
+        run: node ./build.js
+#          hexo clean --debug
+#          hexo generate --debug
 
       #      - name: Execute gulp task
       #        run: gulp
