@@ -1,0 +1,126 @@
+---
+top: false
+cover: false
+moelyrics: true
+toc: false
+background-color: rgb(255 255 255 / 60%)
+---
+
+[骸Attack!!](https://zh.moegirl.org.cn/%E9%AA%B8Attack!!)
+
+词曲	鬱P
+曲绘	Deino
+吉他	zim
+演唱	初音ミク
+
+{% raw %}
+<lyrics hidden>
+
+{{Photrans/button}}
+{{LyricsKai|lstyle=color:#000|rstyle=color:#000|containerstyle=padding:2em
+|original=
+{{Photrans|少女|しょうじょ}}、いたいけな{{Photrans|瞳|ひとみ}}
+{{Photrans|奥底|おくそこ}}{{Photrans|潜|ひそ}}む{{Photrans|陵辱|りょうじょく}}の{{Photrans|記憶|きおく}}
+{{Photrans|少女|しょうじょ}}、{{Photrans|恵|めぐ}}まれた{{Photrans|美貌|びぼう}}
+それを{{Photrans|憎|にく}}む{{Photrans|魔女|まじょ}}、{{Photrans|裁判|さいばん}}、ふぁっきゅー
+
+{{Photrans|言|い}}われも{{Photrans|無|な}}い{{Photrans|嘘|うそ}}　{{Photrans|噂|うわさ}}　{{Photrans|捏造|ねつぞう}}され
+{{Photrans|余|あま}}す{{Photrans|所|ところ}}{{Photrans|無|な}}く{{Photrans|責|せ}}め{{Photrans|立|た}}てられ
+{{Photrans|滅|めつ}}する{{Photrans|希望|きぼう}}　{{Photrans|滅|めつ}}する{{Photrans|精神|せいしん}}
+{{Photrans|蝕|むしば}}まれる{{Photrans|毎日|まいにち}}は{{Photrans|続|つづ}}く
+
+DIE!　DIE!!　DIE!!!
+DIE!　DIE!!　DIE!!!
+
+{{Photrans|行|い}}け　{{Photrans|戦|たたか}}え　{{Photrans|骸|むくろ}}は
+{{Photrans|荒野|こうや}}を{{Photrans|駆|か}}けて{{Photrans|死|し}}を{{Photrans|分|わ}}かつ
+{{Photrans|本能|ほんのう}}のままに　{{Photrans|甚振|いたぶ}}れ
+{{Photrans|怪我|けが}}してもどうせ{{Photrans|死|し}}んでるもん
+
+{{Photrans|少女|しょうじょ}}、{{Photrans|忌々|いまいま}}しき{{Photrans|日々|ひび}}
+{{Photrans|刻|きざ}}み{{Photrans|付|つ}}けられた{{Photrans|痕|あと}}が{{Photrans|醜|みにく}}い
+{{Photrans|少女|しょうじょ}}、{{Photrans|辛|から}}い{{Photrans|誘惑|ゆうわく}}が
+「{{Photrans|殺|ころ}}せよ」「{{Photrans|殺|ころ}}せ」　
+そうしようか！ふぁっきゅー
+
+{{Photrans|報|むく}}い{{Photrans|戒|いまし}}め　{{Photrans|誘|さそ}}え
+あいつに{{Photrans|慈悲|じひ}}など{{Photrans|掛|か}}けてなるものか
+{{Photrans|仇|かたき}}{{Photrans|討|う}}ち　{{Photrans|引裂|ひきさ}}け
+{{Photrans|今|いま}}こそ{{Photrans|復讐|ふくしゅう}}の{{Photrans|鉄槌|てっつい}}を
+
+DIE!　DIE!!　DIE!!!
+DIE!　DIE!!　DIE!!!
+
+{{Photrans|行|い}}け　{{Photrans|戦|たたか}}え
+{{Photrans|奴|やつ}}らは{{Photrans|殺|ころ}}して{{Photrans|然|しか}}るべき{{Photrans|獣|けもの}}
+{{Photrans|荒野|こうや}}を　{{Photrans|駆|か}}けてく
+{{Photrans|骸|むくろ}}は{{Photrans|敵|てき}}の{{Photrans|咽喉|いんこう}}{{Photrans|元|もと}}へ
+
+{{Photrans|阿鼻叫喚|あびきょうかん}}　{{Photrans|執行|しっこう}}{{Photrans|猶予|ゆうよ}}{{Photrans|無|な}}し
+
+{{Photrans|何|なに}}も{{Photrans|聞|き}}こえない　{{Photrans|耳|みみ}}が{{Photrans|無|な}}いから
+{{Photrans|何|なに}}も{{Photrans|見|み}}えない　{{Photrans|眼|め}}が{{Photrans|無|な}}いから
+{{Photrans|何|なに}}も{{Photrans|感|かん}}じない　{{Photrans|神経|しんけい}}が{{Photrans|無|な}}いから
+{{Photrans|唯|ただ}}、{{Photrans|只管|ひたすら}}{{Photrans|刻|きざ}}む
+
+{{Photrans|嗚呼|ああ}}　あの{{Photrans|頃|ころ}}　{{Photrans|夢見|ゆめみ}}た{{Photrans|生命|せいめい}}に{{Photrans|還|かえ}}れないよ
+
+{{Photrans|行|い}}け　{{Photrans|戦|たたか}}え
+{{Photrans|骸|むくろ}}は{{Photrans|真実|しんじつ}}を{{Photrans|知|し}}り{{Photrans|地|ち}}に{{Photrans|還|かえ}}る
+あの{{Photrans|大空|おおぞら}}　{{Photrans|遥|はる}}かに
+{{Photrans|橋|はし}}を{{Photrans|架|か}}けて{{Photrans|簸|ひ}}た{{Photrans|行|い}}くよ
+|translated=
+少女 那稚气未脱的眼底
+潜藏着被凌辱的记忆
+憎恶少女那天赐的美貌的魔女
+我要审判你 FUCK YOU
+
+你制造那些毫无根据的谎言
+风言风语 把少女逼得走投无路 无处躲藏
+熄灭她的希望 摧残她的精神
+每天折磨着她
+
+DIE! DIE!! DIE!!!
+DIE! DIE!! DIE!!!
+
+冲啊 战斗啊 我的尸骸
+在荒野中奔驰 分裂死亡
+靠着本能攻击
+就算受了伤 反正我已经死了
+
+少女 日夜折磨着她
+刻在她身上的丑陋疤痕
+少女 被痛苦地教唆
+“杀了他们啊”“杀啊”
+不能这样 FUCK YOU
+
+报复惩戒与教唆
+这就是这个混蛋挂在脸上的慈悲么
+复仇 撕碎
+今天就是复仇的铁锤落下的时候
+
+DIE! DIE!! DIE!!!
+DIE! DIE!! DIE!!!
+
+冲啊 战斗啊 那些家伙
+只不过是该杀掉的畜生
+在荒野奔驰的我的尸骸啊
+冲向敌人的咽喉
+
+惨叫不绝于耳 制裁绝无怜悯
+
+什么也听不到 因为我已没有耳朵
+什么也看不到 因为我已没有眼睛
+什么也感觉不到 因为我已没有神经
+只有无尽地屠戮
+
+啊啊 已经找不回 梦里才能看到的我的生命
+
+冲啊 战斗啊 我的尸骸
+终回到了真实的净土
+我在那广阔的天空
+架起桥梁奔向远方
+}}
+
+</lyrics>
+{% endraw %}

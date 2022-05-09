@@ -9,3 +9,4 @@ node_modules/
 /package-lock.json
 public
 *.iml
+/_config.yml

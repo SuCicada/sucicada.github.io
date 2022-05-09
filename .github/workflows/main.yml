@@ -50,7 +50,7 @@ jobs:
 
       - name: Generate files
         # 編譯 markdown 文件
-        run: node ./build.js
+        run: node ./build.js all
 #          hexo clean --debug
 #          hexo generate --debug
 
