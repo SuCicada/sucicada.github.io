@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./build.js config
+node ./build.js config
 hexo server
