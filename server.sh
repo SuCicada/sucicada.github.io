@@ -1,4 +1,4 @@
 #!/bin/bash
 
 node ./build.js config
-hexo server
+hexo server -p 4140
