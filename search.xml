@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>mind-study</title>
+      <link href="/BA8Z4A/"/>
+      <url>/BA8Z4A/</url>
+      
+        <content type="html"><![CDATA[<ul><li>社会心理学中的图式理论</li><li>关于人格建模<ul><li>在对他人建立认知的过程中, 使用了哪些他人的特性点进行分类<blockquote><p>社会心理学社会认知分类理论</p></blockquote></li></ul></li><li>心智计算的先驱——赫伯特•西蒙 - 图与信息的文章 - 知乎<br><a href="https://zhuanlan.zhihu.com/p/29882449">https://zhuanlan.zhihu.com/p/29882449</a></li><li>对方伤心如何安慰（不同场景不同原因）</li><li>我们是否该提高我们的receiver阈值</li><li>神经网络训练对日语电话号的自动生成规则</li><li>人的基因是否能随着成长发生改变</li><li>记录总结自己是的人以及自己想要成为的人。</li><li>好东西汇总网站</li><li>零散记录汇</li><li>记录自己的行为，想法。这里特指苏晓蝉行为。这是因为边缘型人格障碍的问题来自于自我表演之后未能自我欣赏，以及未能欣赏到苏晓蝉行为。</li><li>准备几个故事，随时能给人讲的</li><li>人的情感，情绪无非就是一个用于与他人沟通的手段而已。 离开了人类这个群体，情感一无是处。对目的为星际扩张的硅基生物来说，人类比他们多出的情感这个特性的优势荡然无存。<br>这是其一，其二情绪能够控制一个人，让这个人做出超出常规之事，只说有利之处，比如激情。但是如果能够控制这个认知行为，那么人类也可无需借助情绪来被动的进行“认知改变行为”这个行为。-</li><li>未来的夏娃</li><li>关于机器自动写情感故事</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> mind </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 蝉 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Untitled</title>
+      <link href="/183JW5M/"/>
+      <url>/183JW5M/</url>
+      
+        <content type="html"><![CDATA[<p>我深知，我的每一个梦，都是异世界真实救世的证明。</p><p>每一次都是轮回，第一次的轮回是因为所有人的全灭。<br>所以他一直在回溯，将其成为叛逆者A。<br>有一天A告诉我说，我需要在某天之后，某个时间点在圆形剧场等他的到来。<br>那个圆形剧场四周与外界相通，顶棚是一个顶棚。中央是圆柱形突起，有2层，类似汉诺塔。</p><p>这对于平淡生活的我来说真是太刺激了。</p><p>印象中这是第二次的轮回。</p><p>在第一次的轮回中，我亲眼见到了最后的场面。在一家店铺中，主要人物都到齐了，然后祭祀完成，祭祀是什么我忘了，之后一个固定的人会转变为异世界的存在，它来评断我们的命运。因为要素的不完整，所有人乃至地球上的人都消亡了。</p><p>A会感知分析判断下一个关键的时空节点在哪里，我们需要在那里提前做好准备。</p><p>除此之外还有一个房间，在某次的轮回中，我有幸记录了下来。主角是一个男孩子B。房间中还有2个强壮的外国军人，他们在对B行淫秽之事。但是在某个时刻，B收到了关键的信息，这个信息关乎最终Boss，B知道了下一步是十分关键的。他一反常态，不再哼哼啼啼，而是十分严肃与冷静的将那两人的头靠过来，命令了之后绝对不能触碰的事项。后面的就脱离我的意识了。</p><p>每一环中，每一次失败都因为各个要素的不完全导致。<br>在最后一次中，</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mind </category>
+          
+          <category> dream </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>算子Function实例化的坑</title>
+      <link href="/1XXY5E0/"/>
+      <url>/1XXY5E0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题回顾"><a href="#问题回顾" class="headerlink" title="问题回顾"></a>问题回顾</h2><p>关于一段代码：</p><pre class="line-numbers language-scala" data-language="scala"><code class="language-scala"><span class="token keyword">object</span> MySingleObj<span class="token punctuation">&#123;</span><span class="token comment">// 陷阱：</span><span class="token comment">// 单例对象中一个是可变引用，一个是可变数组</span><span class="token keyword">var</span> str<span class="token operator">:</span><span class="token builtin">String</span> <span class="token operator">=</span> _<span class="token keyword">val</span> list <span class="token operator">=</span> <span class="token keyword">new</span> ListBuffer<span class="token punctuation">[</span><span class="token builtin">String</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-scala" data-language="scala"><code class="language-scala"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>dataStream<span class="token punctuation">.</span>map<span class="token punctuation">(</span><span class="token keyword">new</span> RichMapFunction<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">// 问题1：obj1 和 obj2 的实例方式有什么区别。</span><span class="token comment">// 问题2：考虑参数0的作用以及是否会得到预期效果。</span><span class="token keyword">val</span> obj1<span class="token operator">:</span>MyClass <span class="token operator">=</span> <span class="token keyword">new</span> MyClass<span class="token punctuation">(</span>参数<span class="token number">0</span><span class="token punctuation">)</span><span class="token keyword">var</span> obj2<span class="token operator">:</span>MyClass <span class="token operator">=</span> _<span class="token keyword">override</span> <span class="token keyword">def</span> <span class="token keyword">open</span><span class="token punctuation">(</span>paramation<span class="token operator">:</span>Configuration<span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">Unit</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>obj2 <span class="token operator">=</span> <span class="token keyword">new</span> MyClass<span class="token punctuation">(</span>参数<span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token keyword">override</span> <span class="token keyword">def</span> map<span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token comment">// 问题3：如果在这里使用 obj1 和 obj2 会有什么区别。</span><span class="token comment">// 问题4：单个slot中对单例对象中的变量修改，造成的影响是。</span>MySingleObj<span class="token punctuation">.</span>str <span class="token operator">=</span> valueMySingleObj<span class="token punctuation">.</span>list <span class="token operator">+=</span> value<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><hr><h2 id="探究"><a href="#探究" class="headerlink" title="探究"></a>探究</h2><p>主要讨论问题1，2。open方法内外实例对象的区别。</p><p>如下图， 我们在open中和open外分别new了一个对象。开4并行度，本地执行，模拟4个slot。</p><p><img src="/1XXY5E0/image-20210127164519575.png" alt="算子Function实例化的坑/image-20210127164519575.png"></p><p>通过HSDB查看</p><p>一共9个实例，其中4个slot每个2个实例，再加一个client的实例。</p><p><img src="/1XXY5E0/image-20210127164536390.png" alt="算子Function实例化的坑/image-20210127164536390.png"></p><p>而且内存地址都不相同。</p><p><img src="/1XXY5E0/image-20210127164456455.png" alt="算子Function实例化的坑/image-20210127164456455.png"></p><p>这个就说明在open外实例，对于每个slot也是不同地址的对象。</p><hr><p>简单来说就是：如果在类内open外实例，那么构造过程只会在client执行一次，之后的slot中的对象都相当于是这个实例的克隆。<br>这样做和open内实例区别就是：实例的构造方法是否被执行。</p><p>比如说我们需要根据不同的slot传入不同构造参数，那么使用前者（即open外实例）就不合适了，因为每个slot得到的实例对象的初始状态都是相同的。</p><h2 id="提醒"><a href="#提醒" class="headerlink" title="提醒"></a>提醒</h2><ol><li><p>Flink 算子Function对象的初始化有2个地方，一个是在Clinet端的构造函数中。另一个就是在每个Slot中的<strong>open</strong>方法中。而对于Flink来说任务初始化的时候会调用算子的<strong>open</strong>方法。所以一些初始逻辑一定要记得写在<strong>open</strong>方法中。</p></li><li><p>因为Flink的slot是多线程执行，所以一定要注意全局静态变量的问题。比如Scala的单例对象或者Java中的静态变量，一定要十分谨慎的在算子中修改其值，最好不要有类似操作。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Flink </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>论面向函数编程的链式调用</title>
+      <link href="/SSH53P/"/>
+      <url>/SSH53P/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/../../images/java/%E8%AE%BA%E9%9D%A2%E5%90%91%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B%E7%9A%84%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8.png"><br>左边是 Python 的传递式函数调用，右边是 Scala 的链式调用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>dict-git</title>
+      <link href="/18GH338/"/>
+      <url>/18GH338/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p>nedb</p></li><li><p>sqlite3</p></li><li><p>node-sqlite3</p></li><li><p>nodejs</p></li><li><p>wsl</p></li><li><p>scalajs</p></li><li><p>electron</p><ul><li>nimblenote</li></ul></li><li><p>grafana_api</p></li><li><p>g2ww: grafana -&gt; webcom</p></li><li><p>node-request</p></li><li><p>node-telegraf</p></li><li><p>ssh-chat</p></li><li><p>node-electron</p></li><li><p><a href="https://github.com/trekhleb/javascript-algorithms">javascript-algorithms</a></p></li><li><p><a href="https://github.com/Genymobile/scrcpy">scrcpy</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>dict-site</title>
+      <link href="/1SSJPVM/"/>
+      <url>/1SSJPVM/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS">https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS</a></li><li><a href="https://segmentfault.com/">https://segmentfault.com/</a></li><li><a href="https://juejin.cn/">https://juejin.cn/</a></li><li>OpenJS Foundation</li><li><a href="https://www.raspberrypi.org/">https://www.raspberrypi.org/</a></li><li><a href="https://hellogithub.com/">https://hellogithub.com/</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>knowledge</title>
+      <link href="/2F0EBGX/"/>
+      <url>/2F0EBGX/</url>
+      
+        <content type="html"><![CDATA[<ul><li>Akka - Actor Model</li><li><a href="https://stackoverflow.com/questions/56457685/how-to-fix-the-sbt-crash-java-lang-numberformatexception-for-input-string-0x">export TERM&#x3D;xterm-color</a></li><li>readlink -f realpath</li><li>.editorconfig</li><li><a href="https://www.sqlite.org/intern-v-extern-blob.html">Internal Versus External BLOBs in SQLite</a></li><li>nodejs 的异步非阻塞io. 与go的协程. 其间的启发</li><li>io 多路复用</li><li><a href="https://segmentfault.com/a/1190000003063859">select, poll, epoll</a></li><li>linux 环境变量 全走https代理<br>python3 requests 库 报错<br>requests.exceptions.ProxyError: HTTPSConnectionPool(host&#x3D;’hk-cn2.ghelper.net’, port&#x3D;7000): Max retries exceeded with url: <a href="http://www.baidu.com/">http://www.baidu.com/</a> (Caused by ProxyError(‘Cannot connect to proxy.’, RemoteDisconnected(‘Remote end closed connection without response’))</li><li>  <pre class="line-numbers language-none"><code class="language-none">#sinks.has.enable.idempotence&#x3D;true# 设置了retries参数，可以在Kafka的Partition发生leader切换时，Flink不重启，而是做5次尝试：sinks.has.retries&#x3D;5# produce ack &#x3D;-1 ，保证不丢#sinks.has.acks&#x3D;all#sinks.has.compression.type&#x3D;snappy#sinks.has.max.request.size&#x3D;15728640#sinks.has.linger.ms&#x3D;1000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><a href="https://www.cnblogs.com/fbiswt/p/11798514.html">HIVE_STATS_JDBC_TIMEOUT</a></li><li>flink如何让非广播流后于广播流初始化后执行？<br><a href="https://segmentfault.com/q/1010000022940925">https://segmentfault.com/q/1010000022940925</a><ul><li>使用缓冲区暂存&#96;</li><li>java性能好的 队列<ul><li>linkedlist 和scala的queue对比 之后, 后者时间花费10倍, 可能和scala不停队列转换有关</li></ul></li><li>存储在内存中queue, 可能存在oom问题<ul><li>checkpint能做到什么程度, 以及消费kafka能恢复到什么程度</li></ul></li><li>测试 检查点恢复之后, 能够继续消费</li><li>测试 没有检查点, 使用kafka source 默认的StartupMode.GROUP_OFFSETS 模式, <ul><li>能够从group-offset继续消费</li><li>但是写入的文件会覆盖(从0开始)</li></ul></li><li>测试 没有检查点, 使用 StartupMode.LATEST, <ul><li>首先 kafka 控制台手动改组offset</li><li>重启之后 offset自动到最新的, 并没有消费之前的数据( 消费丢失 )</li><li>万万不可这么设置</li></ul></li><li>使用缓存区存储测试<ul><li>[blog] Thread.sleep 延时问题</li><li>测试通过</li></ul></li><li>缓存区否决,使用open初始化<ul><li>分发缓存文件</li><li>测试成功</li></ul></li></ul></li><li>系统业务解耦</li><li>client在gate的搜索</li><li>clent-&gt;server</li><li>server-&gt;client\</li><li>分层架构</li><li>架构是演进的, 不是设计的</li><li>跳表</li><li>智能指针</li><li>日志链路</li><li>大数据安全体系</li><li>pmem</li><li>dram</li><li>cdn: 有限机器的如何数据保证, 业务保证, 调度</li><li>运维发布无感知</li><li><a href="https://github.com/opencurve/curve">https://github.com/opencurve/curve</a></li><li>serverless</li><li>边缘计算</li><li>云计算</li><li>muti raft</li><li>对象存储</li><li>abtest</li><li>doris</li><li>kibana</li><li>push rank</li><li>daojiaping</li><li>doris</li><li>Redis 多租户</li><li>ofc</li><li>lua</li><li>lucene</li><li>service mesh</li><li>lru</li><li>EC 编码</li><li>多模态</li><li>认知推荐</li><li>jsu</li><li>先验知识</li><li>配置文件 vs dsl</li><li>yarn</li><li>自发现crd配置</li><li>dts</li><li>认知图谱</li><li><a href="https://www.zhihu.com/question/26924011">为什么不要直接在Object.prototype上定义方法？(JavaScript)</a><br><a href="https://stackoverflow.com/questions/1827458/prototyping-object-in-javascript-breaks-jquery">https://stackoverflow.com/questions/1827458/prototyping-object-in-javascript-breaks-jquery</a></li><li><a href="http://www.madore.org/~david/programs/unlambda/">The Unlambda Programming Language</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>内分泌系统</title>
+      <link href="/3DRSSA5/"/>
+      <url>/3DRSSA5/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zh.wikipedia.org/wiki/%E9%A1%9E%E5%9B%BA%E9%86%87">类固醇</a><br><a href="https://zh.wikipedia.org/wiki/%E8%83%BA%E5%9F%BA%E9%85%B8">氨基酸</a>类<br><a href="https://zh.wikipedia.org/wiki/%E8%9B%8B%E7%99%BD%E8%B3%AA">蛋白质</a>或<a href="https://zh.wikipedia.org/wiki/%E8%82%BD%E9%A1%9E%E6%BF%80%E7%B4%A0" title="肽类激素">肽类激素</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>formula</title>
+      <link href="/1KK2P41/"/>
+      <url>/1KK2P41/</url>
+      
+        <content type="html"><![CDATA[<p>心理模型和数学模型是一样的,都能量化.<br>我们先从最简单的开始.</p><p>认知资源 &#x3D; 精神能量 - 肉体异常度 - 精神异常度 </p><p>肉体异常度 &#x3D; 疲劳度 + 饥饿度 + 口渴度 + 困倦度 + 伤病痛<br>精神异常度 &#x3D; 恐惧度(now) + 愤怒度(now) + 厌恶度() </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> log </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于屠龙之术</title>
+      <link href="/1SEZYDX/"/>
+      <url>/1SEZYDX/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于屠龙之术。"><a href="#关于屠龙之术。" class="headerlink" title="关于屠龙之术。"></a>关于屠龙之术。</h1><p>2020&#x2F;11&#x2F;01</p><p>计算机底层才是真正与计算机沟通的正确方法。既然选择了与计算机战斗（并肩作战？）这条道路。那么就必须要习得屠龙之术。</p><p>我们必须摆脱舒适圈，利刃是要经过烈火锻造、血浴战场才能完成的。已经没有多少时间了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> log </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Aimer - I beg you</title>
+      <link href="/1EEMT47/"/>
+      <url>/1EEMT47/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zh.moegirl.org.cn/I_beg_you">I Beg You</a></p><lyrics hidden>    {{Photrans2/button}}    {{LyricsKai    |reserveWidth=0px    |lstyle=color:#E00418;    |rstyle=color:#1E0000    |original=    {{lj|あわれみを{{PT|下|くだ}}さい    {{PT|堕|お}}ちた{{PT|小鳥|ことり}}にそっと触れるような    かなしみを下さい    涙ぐんで    {{PT|見下|みお}}ろして    {{PT|可哀想|かわいそう}}だと口に出して    靴の{{PT|先|さき}}で{{PT|転|ころ}}がしても構わないわ    {{PT|汚|よご}}れててもいいからと    {{PT|泥|どろ}}だらけの手を取って    ねぇ{{PT|輪|わ}}になって{{PT|踊|おど}}りましょう    {{PT|目障|めざわ}}りな{{PT|有象無象|うぞうむぞう}}は{{PT|全|すべ}}て    たべてしまいましょう    スパイスは{{PT|堪|た}}え{{PT|難|がた}}いくらいがいいわ    lie, lie, lie, la la la...    {{PT|怯|おび}}えた小鳥は    さよならなんて言えなくて    愛を{{PT|請|こ}}う{{PT|仕草|しぐさ}}で{{PT|黙|だま}}り{{PT|込|こ}}んで    つつましいつもりでいた    lie, lie, it's a lie, not a lie, もう 辛い    {{PT|散々|さんざん}}{{PT|傷|きず}}ついて    やさしいせかいに誰だって行きたいわ    ひとつに{{PT|溶|と}}けてしまいましょう    {{PT|憎|にく}}しみも{{PT|愛情|あいじょう}}もむしゃむしゃと    {{PT|頬張|ほおば}}ってしまいましょう    {{PT|混沌|こんとん}}の甘い甘い{{PT|壺|つぼ}}の中で    lie, lie, lie, la la la...    曖昧に笑うから    会いたいと思うのよ    I know you’re here to stay with me    愛されていたいだけ    lie, lie, lie, you're to be with me    {{PT|雷鳴|らいめい}}の咲くところ    {{PT|惨憺|さんたん}}たる Heavenly Feeling    愛だけ残ればいい    しんしんとかなしみだけがふりつもる    {{PT|願望|がんぼう}}も{{PT|悔恨|かいこん}}もただ{{PT|埋|う}}め{{PT|尽|つ}}くす    きずな{{PT|結|むす}}んだ{{PT|遠|とお}}い春の日を    {{PT|傷跡|きずあと}}さえも{{PT|消|き}}えてしまうの？    やがてキラキラ夢の中    {{PT|朽|く}}ちて行く{{PT|光|ひかり}}は貴方に    {{PT|届|とど}}くはずだから    まぶしくて    涙が止まらない    ねぇどうか{{PT|側|そば}}にいて    泥だらけの手を取って    離さないで    どうかずっと{{PT|側|そば}}にいて    離さないで    {{PT|暗|くら}}くなるの、{{PT|側|そば}}にいて    離さないで、見えないわ    ただずっと側にいて    離さないで    ただずっと    愛してる}}    |translated=    请施予我你的悲悯吧    好比你轻抚失坠鸟儿时所给予的同情    请让我感受你的哀恸吧    眼眶泛泪    哀叹而低下头    对我说些哀怜的慰藉来吧    失足绊倒我也不在乎了    反正早已失去纯洁之身    请就这样拾起我那沾满泥泞的手来    来吧 牵手相拥起舞吧    将碍眼的世间万物全部    吞噬殆尽    增添的辛香料就选近乎令人难受的    lie, lie, lie, la la la...    惶恐不安的鸟儿    鸣啼不出诀别词    仅仅缄默不语    以虔诚身姿跪地乞求着爱    谎话连篇 是谎亦或实 都令人心痛    狠狠遭受伤害后    又有谁不愿奔赴充满善意的世界    将其全部融为一体吧    憎恨也好爱情也好全部    于混沌中那香甜四溢的壶中    大口大口尽情吞噬    lie, lie, lie, la la la...    正因为有你那缥缈模糊的笑颜    我才如此盼求与你再会    明白你会留在这陪伴我    我所乞求唯有得你宠爱    谎称你会永远陪伴着我    于雷鸣奔腾之处    体会悲恸的极致感    我乞求残存的是爱    喷涌而出的悲戚层层堆叠    愿望与悔恨彻底掩过    那远去的系起我们羁绊的春日    遭刻上的伤会有彻底消失的一天吗？    于光辉闪耀的梦中    逐渐黯淡远去的光    终将触及你    如此光辉灿烂    令我止不住泪    呐 我乞求你陪伴在身旁    拾起我那遍布泥泞的手    恳请你不要走    永远陪伴着我    请不要离开我    失去你又将回归黑暗 不要走    请不要抛下我 已经失去光了    只乞求你留下    不要留我一人    已经只剩    对你无尽的爱念    }}    </lyrics><!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> --><!-- <script src="http://localhost:5501/dist/moelyrics.min.js"></script> -->]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Expres</title>
+      <link href="/353JCNM/"/>
+      <url>/353JCNM/</url>
+      
+        <content type="html"><![CDATA[<lyrics hidden>    <poem>        * '''''粗斜体字'''''為PV文案。        {{color|#0a3a7d|        {{color|#6e074a|'''''汝已被此世放逐'''''        '''''因汝背负之原罪'''''        '''''那吾愿献上最极致的诅咒'''''        '''''诅咒爱与被爱之物'''''}}        从遥远彼方传来了　花开叶落的声音        拒绝了王冠的英雄啊　正驻足倾听        从咫尺梦中传来了那人哭泣的声音        归来吧请回应我的呼唤　在消弭之际        忠贞的爱人　因爱生了恨　因恨失自尊　越发地愚蠢        善恶已不辨　良莠亦不分　裹挟了舆论　怜自己痴嗔        美丽的爱人　温柔且温顺　只爱我一人　再不曾悔恨        冥王关上了　通向轮回的门　是失了光辉的神        {{color|#6e074a|'''''你也是被抛弃的人吗'''''        '''''来吧，与我一同欣赏吧'''''        '''''来吧，一起憎恨这个世界'''''}}        被喂下这颗毒药的　两株冷漠的花        散发着陈年的腐臭啊　至今仍念着她        被喂下这颗毒药后　也无法将恨洗刷        残留在口腔的那块骨骼　早已发芽        忠贞的爱人　因爱生了恨　因恨失自尊　越发地愚蠢        善恶已不辨　良莠亦不分　裹挟了舆论　怜自己痴嗔        优雅的爱人　拨动了指针　忘记了停顿　从此不相称        冥王关上了　通向轮回的门　在门上烙下一吻        {{color|#6e074a|'''''「我是旅行至此的法师，追踪异变已久」'''''        '''''「是的，不用慌张，生死与离别早有预谋」'''''        '''''「你们的不幸都是源于某人偏执的诅咒」'''''        '''''「请告知如下地点，我将消灭罪恶的源头」'''''        '''''「啊，欢迎您，远行至此的善良的法师」'''''        '''''「您一席话，解释了压抑多年的懣愁」'''''        '''''「在您凯旋归来之时，我们将为您吹响胜利的号角」'''''        '''''「架起冲天之火，焚尽那可恨罪人的血与肉」'''''}}        忠贞的爱人　因爱生了恨　因恨失自尊　越发地愚蠢        善恶已不辨　良莠亦不分　裹挟了舆论　怜自己痴嗔        美丽的爱人　温柔且温顺　{{color|#6e074a|'''''那孩子学会了我的咒语吗'''''}}        只爱我一人　再不曾悔恨　{{color|#6e074a|'''''她 去哪里了呢'''''}}        冥王关上了　通向轮回的门　是失了光辉的神        可悲的爱人　不相信理论　被自信围困　永世难脱身        惶惶然漂泊　空空然浮沉　自诩很残忍　见不得离分        风干的爱人　冰冷的体温　肩负着责任　白昼至黄昏        冥王关上了　通向轮回的门　静候世界的延伸        {{color|#6e074a|'''''你为什么要来救我啊...'''''        '''''傻丫头，你忘了吗，我的咒语'''''}}        静候世界的延伸　{{color|#6e074a|'''''是让人失去所爱之人的诅咒啊'''''}}        {{color|#6e074a|'''''行星历1126年，第九巫女Pluto因罪被教会驱逐'''''        '''''其不仅不知悔改，还倚赖共神所赐之力为世间带来灾厄'''''        '''''渎神之行至其罪上加罪，人神共愤'''''        '''''为此，教会派遣直属'''''{{coloredlink|#6e074a|浊令|'''''第七执行人'''''}}'''''予以肃清'''''        '''''第七执行人在共神的庇佑下，追踪到了罪人的行径'''''        '''''并在压倒性优势下，将其俘虏'''''        '''''欢欣鼓舞的群众助第七执行人架起审判的火刑架'''''        '''''因罪人罪孽深重，共神之火将其炙烤了227年方才灭尽'''''        '''''此后，世间重归善与美，荣恩'''''}}}}    </poem></lyrics><!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> --><!--<script src="http://localhost:63210/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>--><p><a href="https://zh.moegirl.org.cn/EXpres">来源</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JUSF周存 - 请踢断我的肋骨吧</title>
+      <link href="/1MCF1FT/"/>
+      <url>/1MCF1FT/</url>
+      
+        <content type="html"><![CDATA[<lyrics hidden>{{Photrans2/button}}* '''''斜體粗字'''''為PV文案。{{LyricsKai|lstyle=text-align:gradient;color:#ff1e00;font-size:x-8em;text-shadow:-1.2px -1.2px 0 #b2f1d8; letter-spacing:0.05em; white-space:nowrap;|rstyle=text-align:gradient;color:#ff1e00;font-size:x-8em;text-shadow:-1.2px -1.2px 0 #b2f1d8; letter-spacing:0.05em; white-space:nowrap;|reserveWidth=10px|original=<br>{{PT|賑|にぎ}}やか　でもなく{{PT|静|しず}}かでもない{{PT|萌葱|もえぎ}}と{{PT|灰色|はいいろ}}の　{{PT|組み合|くみあ}}わせあたたかい{{PT|南|みなみ}}の　{{PT|小|ちい}}さな{{PT|町|まち}}{{PT|人込|ひとご}}みの{{PT|中|なか}}での　{{PT|孤独感|こどくかん}}{{PT|他人|たにん}}を{{PT|守|まも}}るための　{{PT|自己|じこ}}{{PT|犠牲|ぎせい}}{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|死|し}}なない{{PT|程度|ていど}}に　お{{PT|願|ねが}}いね{{PT|君|きみ}}のくるぶし　{{PT|触|さわ}}りたい{{PT|温|ぬく}}もりも　{{PT|感|かん}}じさせてよ{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|死|し}}なない{{PT|程度|ていど}}に　お{{PT|願|ねが}}いね{{PT|美|うつく}}しい{{PT|君|きみ}}をもっと{{PT|見|み}}たい{{PT|君|きみ}}の{{PT|存在|そんざい}}を　{{PT|感|かん}}じさせてよ{{PT|青|あお}}と{{PT|茜色|あかねいろ}}の　{{PT|組み合|くみあ}}わせ{{PT|解|と}}け{{PT|合|あ}}わなくても　{{PT|構|かま}}わない{{PT|運命|うんめい}}のお{{PT|酒|さけ}}を　{{PT|飲|の}}んでて{{PT|夜空|よぞら}}から{{PT|落|お}}ちてきて　{{PT|抱|だ}}きしめよう{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってくださいそして　{{PT|僕|ぼく}}の'''''Dear my God'''''{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|首|くび}}{{PT|絞|し}}め{{PT|窒息死|ちっそくし}}させてよ{{PT|僕|ぼく}}のわがままを　{{PT|許|ゆる}}して{{PT|君|くん}}の{{PT|存在|そんざい}}を　{{PT|感|かん}}じさせてよ{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|心臓|しんぞう}}を{{PT|踏|ふ}}んでず{{PT|潰|つぶ}}しでこれで　{{PT|僕|ぼく}}も{{PT|愛|あい}}されたよねすべてを　{{PT|感|かん}}じさせてよ{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってくださいそして　{{PT|僕|ぼく}}のものになった{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください{{PT|僕|ぼく}}の{{PT|肋骨|ろっこつ}}を{{PT|蹴|け}}ってください|translated=<br>不属于喧嚣也不属于静谧色调是青黄和灰温暖的南方城镇凝结在人群中的孤独为守护他人而牺牲自我请踢断我的肋骨吧但是请给我留一口气吧请让我触碰你的脚踝吧请让我感受到你的温度吧请踢断我的肋骨吧但是请给我留一口气吧请让我再多欣赏你的美吧请让我感受到你的存在吧色调是蓝和暗红无法融入也无妨饮下命运的烈酒夜空拥抱他的坠落请踢断我的肋骨吧请踢断我的肋骨吧请踢断我的肋骨吧这样我就'''''Dear my God'''''请踢断我的肋骨吧请勒住我的脖颈让我窒息吧请接受我的放纵吧请让我感受到你的存在吧请踢断我的肋骨吧请踩碎我的心脏吧这样我也算被爱了吧请让我感受到你的全部吧请踢断我的肋骨吧请踢断我的肋骨吧请踢断我的肋骨吧这样我就能得到你了请踢断我的肋骨吧请踢断我的肋骨吧请踢断我的肋骨吧}}<!--{{JUSF周存|collapsed}}--><!--[[分类:中国音乐作品]]--><!--[[分类:使用VOCALOID的歌曲]]--><!--[[分类:镜音铃歌曲]]--></lyrics><!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> --><p><a href="https://zh.moegirl.org.cn/%E8%AF%B7%E8%B8%A2%E6%96%AD%E6%88%91%E7%9A%84%E8%82%8B%E9%AA%A8%E5%90%A7">来源</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unlucky Morpheus - 籠の鳥</title>
+      <link href="/2YKP5RG/"/>
+      <url>/2YKP5RG/</url>
+      
+        <content type="html"><![CDATA[<p>籠の鳥(かごのとり)<br>歌：Unlucky Morpheus</p><lyrics hidden>{{Photrans2/button}}{{LyricsKai|width=900px|reserveWidth=0px|lstyle=color:#E00418;|rstyle=color:#1E0000|original={{PT|機械|きかい}}と{{PT|蒸気|じょうき}}の{{PT|階層|かいそう}}{{PT|陽光|ようこう}}も{{PT|届か|とどか}}ぬ{{PT|地|ち}}の{{PT|獄|ごく}}{{PT|好み|このみ}}の{{PT|筋骨|きんこつ}}を{{PT|誂え|あつらえ}}{{PT|慰む|なぐさむ}}{{PT|火花|ひばな}}を{{PT|散ら|ちら}}して{{PT|死生|しせい}}{{PT|有|あり}}{{PT|命|いのち}}{{PT|籠|かご}}{{PT|鳥|とり}}{{PT|恋|こい}}{{PT|雲|くも}}{{PT|狂う|くるう}}{{PT|前|まえ}}に{{PT|乱|らん}}{{PT|離|り}}{{PT|骨灰|こっかい}}{{PT|籠|かご}}{{PT|鳥|とり}}{{PT|檻|らん}}{{PT|猿|さる}}{{PT|発|はつ}}きなさい{{PT|持た|もた}}ぬ{{PT|者|もの}}と{{PT|奪う|うばう}}{{PT|者|もの}}よ{{PT|駆逐|くちく}}された{{PT|此の|この}}{{PT|世界|せかい}}であぁ{{PT|誰|だれ}}を{{PT|葬送|そうそう}}ろう{{PT|闘い|たたかい}}{{PT|明か|あか}}した{{PT|恍惚|こうこつ}}{{PT|錨|いかり}}を{{PT|沈め|しずめ}}た{{PT|血|ち}}の{{PT|海|うみ}}{{PT|生身|なまみ}}の{{PT|体躯|たいく}}を{{PT|脱ぎ|ぬぎ}}{{PT|去り|さり}}{{PT|骸|むくろ}}に{{PT|魂|たましい}}{{PT|宿|やど}}して{{PT|天|てん}}を{{PT|断た|たた}}れ{{PT|墜ち|おち}}た{{PT|鳥|とり}}よ{{PT|駆逐|くちく}}された{{PT|此の|この}}{{PT|世界|せかい}}で{{PT|死|し}}へ{{PT|挑む|いどむ}}ように{{PT|涙|なみだ}}さえも{{PT|朽ち|くち}}た{{PT|時間|じかん}}を{{PT|ガラス|がらす}}の{{PT|眼|め}}に{{PT|問う|とう}}{{PT|代わり|かわり}}にあぁ{{PT|唯|ただ}}{{PT|歌う|うたう}}だけ{{PT|死生|しせい}}{{PT|有|あり}}{{PT|命|いのち}}{{PT|籠|かご}}{{PT|鳥|とり}}{{PT|恋|こい}}{{PT|雲|くも}}{{PT|狂う|くるう}}{{PT|前|まえ}}に{{PT|乱|らん}}{{PT|離|り}}{{PT|骨灰|こっかい}}{{PT|籠|かご}}{{PT|鳥|とり}}{{PT|檻|らん}}{{PT|猿|さる}}{{PT|発|はつ}}きなさい{{PT|揺ら|ゆら}}ぎ{{PT|燃え|もえ}}る{{PT|愛|あい}}を{{PT|記憶|きおく}}{{PT|見|けん}}{{PT|棄て|すて}}られた{{PT|此の|この}}{{PT|世界|せかい}}でまだ{{PT|生き|いき}}ている{{PT|消え|きえ}}ぬ{{PT|想い|おもい}}{{PT|貴方|あなた}}の{{PT|声|こえ}}{{PT|四肢|しし}}も{{PT|脳|のう}}も{{PT|全て|すべて}}{{PT|賭け|かけ}}てさあ{{PT|此の|この}}{{PT|歌を|うたを}}{{PT|天|てん}}を{{PT|仰げ|あおげ}}{{PT|籠|かご}}の{{PT|鳥|とり}}よ{{PT|望ま|のぞま}}ずとも{{PT|此の|この}}{{PT|世界|せかい}}で{{PT|死|し}}へ{{PT|舞い|まい}}{{PT|歌え|うたえ}}たった{{PT|一つ|ひとつ}}{{PT|枯れ|かれ}}ぬ{{PT|愛|あい}}を{{PT|鋼|こう}}の{{PT|手に|てに}}{{PT|抱く|だく}}{{PT|為に|ために}}あぁ{{PT|唯|ただ}}{{PT|歌う|うたう}}だけ|translated=机器和蒸汽的层次结构阳光照射不到的监狱为您选择的肌肉量身定做安慰的火花散落一地生与死，生与死，笼中鸟和爱的云朵在你疯掉之前我是一只被关在笼子里的猴子，有骨头和灰烬勇往直前穷人和富人在这个灭亡的世界里哦!我们应该埋葬谁呢？我们为之奋斗的狂喜我们在那里抛锚的血海我们舍弃了我们的血肉之躯尸体中的灵魂坠落的鸟儿，从天空中被切断在这个被灭绝的世界里仿佛在向死亡挑战即使我们的眼泪也是腐朽的时间而不是去问那只玻璃眼睛啊!我只唱生与死，生与死，笼中鸟与爱的云彩在你发疯之前笼子里的猴子有骨头和灰烬来吧记住那份燃烧着的爱，闪烁着的爱在这个被遗弃的世界里我还活着你的声音还活着每一个肢体和大脑都处于危险之中来吧唱这首歌仰望天空，你这只笼中鸟即使你不愿意，在这个世界上唱到死只有一种爱，永远不会消失握在你的铁手中啊!只为歌唱}}</lyrics><!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> -->]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>and I&#39;m home</title>
+      <link href="/24RRGR7/"/>
+      <url>/24RRGR7/</url>
+      
+        <content type="html"><![CDATA[<lyrics hidden>{{Photrans2/button}}{{color_block|red}} 佐仓杏子 {{color_block|blue}} 美树沙耶香 {{color_block|#DA70D6}} 合唱{{LyricsKai|lstyle=color:#CC00FF|rstyle=color:#CC00FF|reserveWidth=0px|original={{color|red|{{Photrans2|錆|さ}}び{{Photrans2|付|つ}}いた{{Photrans2|心|こころ}}、}}{{color|red|{{Photrans2|音|おと}}もない{{Photrans2|世界|せかい}}、}}{{color|red|{{Photrans2|何|なに}}を{{Photrans2|見|み}}てるの}}{{color|red|またねを{{Photrans2|言|い}}える{{Photrans2|顔|かお}}を{{Photrans2|探|さが}}すよ}}{{color|red|それを{{Photrans2|繰|く}}り{{Photrans2|返|かえ}}すだけ}}{{color|blue|{{Photrans2|気付|きづ}}けばそこには}}{{color|blue|ひとりきりで{{Photrans2|泣|な}}く{{Photrans2|後|うし}}ろ{{Photrans2|姿|すがた}}}}{{color|red|{{Photrans2|辛|つら}}いような}}{{color|blue|{{Photrans2|寂|さび}}しいような、}}{{Photrans2|場所|ばしょ}}。{{Photrans2|手|て}}を{{Photrans2|繋|つな}}いでいたいんだ{{Photrans2|何度目|なんどめ}}の{{Photrans2|気持|きも}}ちだろうここにある{{Photrans2|温|ぬく}}もりは{{Photrans2|間違|まちが}}いでも{{Photrans2|構|かま}}わない、{{Photrans2|傍|そば}}にいること{{Photrans2|涙|なみだ}}の{{Photrans2|音|おと}}、ため{{Photrans2|息|いき}}の{{Photrans2|色|いろ}}{{Photrans2|今|いま}}、{{Photrans2|確|たし}}かめる{{Photrans2|現在地|げんざいち}}{{Photrans2|冗談|じょうだん}}みたいな{{Photrans2|毎日|まいにち}}{{Photrans2|見|み}}たい、{{Photrans2|見|み}}たい、{{Photrans2|未来|みらい}}{{color|blue|{{Photrans2|強|つよ}}がりの{{Photrans2|声|こえ}}も{{Photrans2|掠|かす}}れたな、と}}{{color|blue|{{Photrans2|夢|ゆめ}}に{{Photrans2|落|お}}ちるの}}{{color|blue|{{Photrans2|抱|かか}}えた{{Photrans2|膝|ひざ}}、}}{{color|blue|{{Photrans2|目|め}}を{{Photrans2|落|お}}とすと}}{{color|blue|すぐに{{Photrans2|崩|くず}}れてしまいそうで}}{{color|red|このまま、このまま}}{{color|red|ふたりきり{{Photrans2|駆|か}}け{{Photrans2|込|こ}}む{{Photrans2|遠|とお}}い{{Photrans2|出口|でぐち}}、}}{{color|blue|まだ、{{Photrans2|期待|きたい}}しているの。}}さあ{{Photrans2|笑|わら}}って{{Photrans2|見|み}}つめ{{Photrans2|合|あ}}うんだ{{Photrans2|単純|たんじゅん}}で{{Photrans2|無邪気|むじゃき}}な{{Photrans2|顔|かお}}、くしゃくしゃの{{Photrans2|思|おも}}い{{Photrans2|抱|いだ}}いて{{Photrans2|迷|まよ}}い{{Photrans2|込|こ}}んだ{{Photrans2|場所|ばしょ}}さえ{{Photrans2|優|やさ}}しすぎて{{Photrans2|何度|なんど}}でも{{Photrans2|名前|なまえ}}を{{Photrans2|呼|よ}}ぶよ{{Photrans2|不確|ふたし}}かな{{Photrans2|未来|みらい}}でも{{Photrans2|離|はな}}せないもの{{Photrans2|思|おも}}うだけ{{Photrans2|心|こころ}}が{{Photrans2|痛|いた}}いよここにいるよここにいるよ{{Photrans2|帰|かえ}}る{{Photrans2|場所|ばしょ}}はここだよいつだって{{Photrans2|変|か}}わらない{{Photrans2|思|おも}}いを{{Photrans2|残|のこ}}すの|translated={{color|red|锈迹斑斑的心灵}}{{color|red|寂静无比的世界}}{{color|red|你到底看见了什么？}}{{color|red|寻找着能将再见说出口的表情}}{{color|red|只是不断将此重复罢了……}}{{color|blue|回神之时伫立于此}}{{color|blue|只剩下孤单哭泣的背影}}{{color|red|在这个好似艰辛}}{{color|blue|又好似寂寞的}} 地方我想与你一同牵手走下去这种感觉是第几次了呢这份留存于此处的温暖就算是误会也无妨、只要彼此相依眼泪的音色、叹息的色彩现在、确认于此的现居地仿若玩笑般的每一天，想预见、想预见、那未来{{color|blue|逞强的声音也终究声嘶力竭}}{{color|blue|堕落于梦境之中}}{{color|blue|一旦抱紧双膝}}{{color|blue|闭上双眼}}{{color|blue|仿佛立刻就要崩坏一般}}{{color|red|就像这样、就像这样}}{{color|red|你我两人跑向遥远的出口}}{{color|blue|还抱有着期待呢}} 来吧相视而笑吧单纯天真的脸庞拥抱着混乱不堪的思念就连迷路的地点都无比温柔无论几次都会呼喊你的名字就算面对不可确定的未来那些不愿放手之物只是想想心便隐隐作痛我就在这里哟我就在这里哟你的归所不就是在就在这里哟？无论何时都不会改变留下永恒的思念}}</lyrics><!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> --><!--<script src="http://localhost:63210/Moegirl-Lyric-Template-Parser/moelyrics.js"></script>--><p><a href="https://zh.moegirl.org.cn/And_I'm_home">来源</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《千本桜》（千本樱）</title>
+      <link href="/25YVZPQ/"/>
+      <url>/25YVZPQ/</url>
+      
+        <content type="html"><![CDATA[<lyrics hidden>    {{PT/B}}    {{LyricsKai    |lstyle=color:#2B9991;    |rstyle=color:#;    |reserveWidth=40px    |original=    {{PT|大胆不敵|だいたんふてき}}にハイカラ{{PT|革命|かくめい}}    {{PT|磊|らい}}{{PT|々|らい}}{{PT|落|らく}}{{PT|々|らく}}　{{PT|反戦|はんせん}}{{PT|国家|こっか}}    {{PT|日|ひ}}の{{PT|丸|まる}}{{PT|印|じるし}}の{{PT|二輪車|にりんしゃ}}{{PT|転|ころ}}がし    {{PT|悪霊退散|あくりょうたいさん}}　{{PT|I|アイ}}{{PT|C|シー}}{{PT|B|ビー}}{{PT|M|エム}}    {{PT|環状線|かんじょうせん}}を{{PT|走|はし}}り{{PT|抜|ぬ}}けて    {{PT|東奔西走|とうほんせいそう}}なんのその    {{PT|少年少女|しょうねんしょうじょ}}{{PT|戦国|せんごく}}{{PT|無双|むそう}}    {{PT|浮世|うきよ}}の{{PT|随|まにま}}に    {{PT|千本桜|せんぼんざくら}}　{{PT|夜|よる}}ニ{{PT|紛|まぎ}}レ    {{PT|君|きみ}}ノ{{PT|声|こえ}}モ{{PT|届|とど}}カナイヨ    {{PT|此処|ここ}}は{{PT|宴|うたげ}}　{{PT|鋼|はがね}}の{{PT|檻|おり}}    その{{PT|断頭台|だんとうだい}}で{{PT|見下|みお}}ろして    {{PT|三千|さんぜん}}{{PT|世界|せかい}}　{{PT|常世|とこよ}}{{PT|之|の}}{{PT|闇|やみ}}    {{PT|嘆|なげ}}ク{{PT|唄|うた}}モ{{PT|聞|き}}コエナイヨ    {{PT|青|せい}}{{PT|藍|らん}}の{{PT|空|そら}}　{{PT|遥|はる}}か{{PT|彼方|かなた}}    その{{PT|光線銃|こうせんじゅう}}で{{PT|打|う}}ち{{PT|抜|ぬ}}いて    {{PT|百戦錬磨|ひゃくせんれんま}}の{{PT|見|み}}た{{PT|目|め}}は{{PT|将校|しょうこう}}    いったりきたりの{{PT|花魁|おいらん}}{{PT|道中|どうちゅう}}    アイツもコイツも{{PT|皆|みんな}}で{{PT|集|あつ}}まれ    {{PT|聖者|せいじゃ}}の{{PT|行進|こうしん}}　わんっ　つー　さん　しっ    {{PT|禅定門|ぜんじょうもん}}を{{PT|潜|くぐ}}り{{PT|抜|ぬ}}けて    {{PT|安楽|あんらく}}{{PT|浄土|じょうど}}{{PT|厄払|やくばら}}い    きっと{{ruby|終幕|さいご}}は{{PT|大団円|だいだんえん}}    {{PT|拍手|はくしゅ}}の{{PT|合間|あいま}}に    {{PT|千本桜|せんぼんざくら}}　{{PT|夜|よる}}ニ{{PT|紛|まぎ}}レ    {{PT|君|きみ}}ノ{{PT|声|こえ}}モ{{PT|届|とど}}カナイヨ    {{PT|此処|ここ}}は{{PT|宴|うたげ}}　{{PT|鋼|はがね}}の{{PT|檻|おり}}    その{{PT|断頭台|だんとうだい}}で{{PT|見下|みお}}ろして    {{PT|三千|さんぜん}}{{PT|世界|せかい}}　{{PT|常世|とこよ}}{{PT|之|の}}{{PT|闇|やみ}}    {{PT|嘆|なげ}}ク{{PT|唄|うた}}モ{{PT|聞|き}}コエナイヨ    {{PT|希望|きぼう}}の{{PT|丘|おか}}　{{PT|遥|はる}}か{{PT|彼方|かなた}}    その{{PT|閃光|せんこう}}{{PT|弾|だん}}を{{PT|打|う}}ち{{PT|上|あ}}げろ    {{PT|環状線|かんじょうせん}}を{{PT|走|はし}}り{{PT|抜|ぬ}}けて    {{PT|東奔西走|とうほんせいそう}}なんのその    {{PT|少年少女|しょうねんしょうじょ}}{{PT|戦国|せんごく}}{{PT|無双|むそう}}    {{PT|浮世|うきよ}}の{{PT|随|まにま}}に    {{PT|千本桜|せんぼんざくら}}　{{PT|夜|よる}}ニ{{PT|紛|まぎ}}レ    {{PT|君|きみ}}ノ{{PT|声|こえ}}モ{{PT|届|とど}}カナイヨ    {{PT|此処|ここ}}は{{PT|宴|うたげ}}　{{PT|鋼|はがね}}の{{PT|檻|おり}}    その{{PT|断頭台|だんとうだい}}を{{PT|飛|と}}び{{PT|降|お}}りて    {{PT|千本桜|せんぼんざくら}}　{{PT|夜|よる}}ニ{{PT|紛|まぎ}}レ    {{PT|君|きみ}}が{{PT|歌|うた}}い{{PT|僕|ぼく}}は{{PT|踊|おど}}る    {{PT|此処|ここ}}は{{PT|宴|うたげ}}　{{PT|鋼|はがね}}の{{PT|檻|おり}}    さあ{{PT|光線銃|こうせんじゅう}}を{{PT|撃|う}}ちまくれ    |translated=    英勇无畏   明治维新    光明磊落   反战国家    乘着有日之丸印记的自行车    恶灵退散    ICBM（洲际弹道导弹）    疾行穿过环状线    东奔西走   在所不辞    少年少女   战国无双    浮世若梦   唯有随之沉浮    千本樱夜中飞散    你的声音无法传达到    钢铁牢笼之中宴请众人    自那断头台上俯视众生    大千世界    黄泉之暗    哀叹之歌无法听见啊    青蓝天空    遥远彼端    就用那光线枪击穿吧    身经百战    实为将校    人潮来往的花魁道中    不管何位大家都过来聚集    圣者行进    一二三四    穿过佛门中    安乐净土    驱凶避邪    最终一战定是大团圆    雷鸣掌声的之中    千本樱夜中飞散    你的声音无法传达到    钢铁牢笼之中宴请众人    自那断头台上俯视众生    三千世界   黄泉之暗    哀叹之歌无法听见啊    希望之丘   遥远彼端    就将那闪光弹投上天吧    疾行穿过环状线    东奔西走    在所不辞    少年少女    战国无双    浮世若梦    唯有随之沉浮    千本樱夜中飞散    你的声音无法传达到    钢铁牢笼之中宴请众人    自那断头台上跳下来吧    千本樱夜中飞散    歌舞升平    灯火阑珊    钢铁牢笼之中宴请众人    自那扣响光线枪的板机吧    }}</lyrics><!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> --><p><a href="https://zh.moegirl.org.cn/%E5%8D%83%E6%9C%AC%E6%A8%B1">来源</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ナユタン星人 - 太陽系デスコ (ft.初音ミク)</title>
+      <link href="/2P2RZSX/"/>
+      <url>/2P2RZSX/</url>
+      
+        <content type="html"><![CDATA[<lyrics hidden>{{Photrans/button}}{{LyricsKai|lstyle=font-size:1.2em; font-weight:bold|rstyle=font-size:1.2em; font-weight:bold|containerstyle=background-color:#FF6A6A|original=詞曲編：ナユタン星人あの{{Photrans|一等星|いっとうせい}}のさんざめく{{Photrans|光|ひかり}}であなたとダンスを{{Photrans|踊|おど}}ろうか{{Photrans|我|わ}}が{{Photrans|太陽系|たいようけい}}の{{Photrans|鼓動|こどう}}に{{Photrans|合|あ}}わせて{{Photrans|絡|から}}まったステップで{{Photrans|綺羅|きら}}めいて、{{Photrans|星|せい}}ッ!ランバダ ルンバふたり {{Ruby|宇宙|そら}}でランデブーな{{Photrans|妄|もう}}、{{Ruby|患|わずら}}って {{Photrans|連夜眠|れんやねむ}}れない{{Photrans|星座|せいざ}}になって {{Photrans|混|ま}}ざる どんな{{Photrans|一等星|いっとうせい}}もあなたに {{Photrans|代|か}}わる {{Photrans|光度|こうど}}はないわ{{Photrans|校舎|こうしゃ}}の{{Photrans|裏|うら}} あの{{Photrans|日|ひ}} あなた{{Photrans|見|み}}つけた{{Photrans|奇跡|きせき}}さえ {{Photrans|今|いま}}も はなれない{{Photrans|隣|となり}}に {{Ruby|繁|しげ}}く {{Photrans|見|み}}える {{Photrans|冥王星|めいおうせい}}も{{Ruby|生憎|あいにく}}、{{Photrans|今|いま}}は {{Photrans|興味|きょうみ}}がないわ{{Photrans|星|ほし}}が{{Photrans|舞|ま}}っちゃって{{Photrans|胸|むね}}が{{Photrans|鳴|な}}っちゃって{{Photrans|気付|きづ}}けば{{Photrans|彼方|かなた}}―――あの{{Photrans|一等星|いっとうせい}}のさんざめく{{Photrans|光|ひかり}}であなたとダンスを{{Photrans|踊|おど}}ろうか{{Photrans|我|わ}}が{{Photrans|太陽系|たいようけい}}の{{Photrans|法則|ほうそく}}に{{Photrans|誘|さそ}}われ{{Photrans|交|まじ}}わった{{Photrans|感度|かんど}}で{{Photrans|綺羅|きら}}めいて、{{Photrans|星|せい}}ッ!オー・オ・オー！{{Photrans|星間線|せいかんせん}}を{{Photrans|絆|つな}}いでオー・オ・オー！あなたに{{Photrans|届|とど}}けオー・オ・オー！{{Photrans|宇宙|うちゅう}}の{{Photrans|果|は}}てからオー・オ・オー！あなた {{Photrans|侵光系|しんこうけい}}!ナーナナナーナナナーナナナーナナーナナナーナナナーナナナーナナーナナナーナナナーナナナーナナーナナナーナナナーナナナーナ{{Photrans|大体|だいたい}}のダンスは {{Photrans|星|ほし}}が{{Photrans|光|ひか}}り{{Ruby|標|しるべ}}となるのさ{{Photrans|未体験|みたいけん}}なステッポで HA,HA,HA,HA,{{Photrans|大胆|だいたん}}なスタンスで {{Photrans|周回軌道上|しゅうかいきどうじょう}}なぞるのさ{{Photrans|太陽系|たいようけい}}のデスコで HA,HA,HA,HA,{{Photrans|宙|ちゅう}} {{Ruby|揺蕩|たゆた}}って いつか ふたり{{Photrans|忘|わす}}れる{{Photrans|言葉|ことば}}さえ {{Photrans|今|いま}}は{{Photrans|求|もと}}めたい{{Photrans|超新星|ちょうしんせい}}を{{Photrans|願|ねが}}う {{Photrans|暮|く}}れた{{Photrans|世界|せかい}}も{{Photrans|不思議|ふしぎ}}と {{Photrans|今|いま}}はどうでもいいわ{{Photrans|何|なん}}もなくたって{{Photrans|何|なん}}となくだって{{Photrans|星|ほし}}は{{Photrans|巡|めぐ}}って―――あの{{Photrans|一等星|いっとうせい}}の{{Photrans|届|とど}}かぬ{{Photrans|光|ひかり}}は{{Photrans|遥|はる}}かな{{Photrans|彼方|かなた}}で{{Photrans|綺羅|きら}}めいた{{Photrans|我|わ}}が{{Photrans|太陽系|たいようけい}}の{{Photrans|法則|ほうそく}}も{{Photrans|外|はず}}れて「それでもいいさ」{{Photrans|手|て}}をのばして!さあ、{{Ruby|幾星霜|いくせいそう}}と{{Photrans|宿|やど}}した{{Photrans|想|おも}}いであなたの{{Photrans|全|すべ}}て{{Photrans|求|もと}}めようかねえ、{{Photrans|何光年|なんこうねん}}の{{Photrans|広大|こうだい}}な{{Photrans|旅路|たびじ}}で{{Photrans|比翼|ひよく}}の{{Ruby|恋理|れんり}}を{{Photrans|探|さが}}そうかあの{{Photrans|一等星|いっとうせい}}のさんざめく{{Photrans|光|ひかり}}であなたとダンスを{{Photrans|踊|おど}}ろうかほら{{Photrans|水金|すいきん}}だって{{Photrans|地|ち}}{{Photrans|火|か}}{{Photrans|木|もく}}{{Photrans|土|ど}}{{Photrans|天|てん}}{{Photrans|海|かい}}もふたりの{{Photrans|銀河|ぎんが}}で{{Photrans|綺羅|きら}}めいた、{{Photrans|星|せい}}ッ!オー・オ・オー！{{Photrans|星間線|せいかんせん}}を{{Photrans|絆|つな}}いでオー・オ・オー！あなたに{{Photrans|届|とど}}けオー・オ・オー！{{Photrans|宇宙|うちゅう}}の{{Photrans|果|は}}てからオー・オ・オー！あなた {{Photrans|侵光系|しんこうけい}}!ナーナナナーナナナーナナナーナナーナナナーナナナーナナナーナナーナナナーナナナーナナナーナナーナナナーナナナーナナナーナ|translated=翻譯：音時在那一等星的喧嚣光芒下请让我与你一同来跳舞吧让我等来伴随着太阳系的脉动跳着交错的舞步来散发光芒吧星！{{ruby|朗巴得|Lambada}} {{ruby|伦巴|Rumba}}两个人在宇宙中{{ruby|相约幽会|Rendez-vous}}就像这样妄想至病彻夜难眠成为了星座的被混杂的哪种一等星也好能够与你争光的一个都没有校舍后方那一天发现了你那时的奇迹至今也无法忘却在你身旁那颗常见的冥王星如今也因你的存在而不巧的黯然失色星星在旋绕心儿扑通跳回过神来已在彼方在那一等星的喧嚣光芒下请让我与你一同来跳舞吧？你已被我等太阳系定律所俘获灵敏的跳起交错的舞步闪耀全场星！哦-・哦・哦-！随着星际的交界线哦-・哦・哦-！传达给妳哦-・哦・哦-！宇宙的尽头哦-・哦・哦-！你就是　侵光系！NananaーNananaーNananaーNanaーNyanyaーNyaNyaNyaーNyaNyaーNananaーNananaーNananaーNanaーNyanyaーNyaNyaNyaーNyaNyaー舞步大概是由以星星为标记编制而成那就让我们跳这从未感受过的舞步吧 HAHAHAHA来用这大胆的舞步沿着星轨起舞吧跳着太阳系迪斯科 HAHAHAHA宇宙中飘荡着终有天两个人都会忘记就连话语至今也无法寻求祈祷着超新星也好即将过去的这个世界也好不可思议的是现在无论怎样我都不会在意无论会发生什么无论会成为什么星星都会一成不变地旋转着——在那一等星从未传递的光芒中却已经在彼方闪烁了光芒你已被我等太阳系的定律置身于外说着“那也没什么哦”把手伸出来就好看呐历经时光荏苒与留下的思念那么来索求你的一切吧呐用数光年后广阔的旅路去寻求比翼的恋爱真理吧在那一等星的喧嚣光芒下请让我与你一同来跳舞吧看呐无论是水金还是地火木土天海两个人都会成为银河闪耀的存在星！哦-・哦・哦-！随着星际的交界线哦-・哦・哦-！传达给你哦-・哦・哦-！宇宙的尽头哦-・哦・哦-！你就是　侵光系！NananaーNananaーNananaーNanaーNyanyaーNyaNyaNyaーNyaNyaーNananaーNananaーNananaーNanaーNyanyaーNyaNyaNyaーNyaNyaー}}</lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>乐正龙牙 - 殉道者</title>
+      <link href="/253PTJN/"/>
+      <url>/253PTJN/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zh.moegirl.org.cn/%E6%AE%89%E9%81%93%E8%80%85">殉道者</a></p><p>曲绘 by    Pora<br>歌曲名称   殉道者<br>演唱      乐正龙牙<br>UP主      JUSF周存</p><lyrics hidden><poem>{{color|#3B0B0B|我曾浸于光辉希望造访之所堆砌牺牲只为敲开通向自由之扉与残缺卑微共赴　无限未知的征途我只是殉道者　注定我与此世爱恨相隔殉道者不屑于诋毁或颂歌殉道者注定我将溺于时间之河殉道者只属于永恒构造极乐火焰包裹身躯轰鸣带走纷扰思绪我是否将往虚无　我是否将归尘土涌动的生命呐　汲取我奉献出的血肉吧生命呐融解我　与我亲吻吧生命呐记住我　仍祈祷的未来吧生命呐宽恕我　让我见证吧殉道者　毁灭我已无法改变结果殉道者　立下过唯一的承诺殉道者　埋葬我千年后是非定夺殉道者　相信我定将冲破枷锁}}</poem></lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>初音ミク - 骸Attack!!</title>
+      <link href="/3MPBHX1/"/>
+      <url>/3MPBHX1/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zh.moegirl.org.cn/%E9%AA%B8Attack!!">骸Attack!!</a></p><p>词曲鬱P<br>曲绘Deino<br>吉他zim<br>演唱初音ミク</p><lyrics hidden>{{Photrans/button}}{{LyricsKai|lstyle=color:#000|rstyle=color:#000|containerstyle=padding:2em|original={{Photrans|少女|しょうじょ}}、いたいけな{{Photrans|瞳|ひとみ}}{{Photrans|奥底|おくそこ}}{{Photrans|潜|ひそ}}む{{Photrans|陵辱|りょうじょく}}の{{Photrans|記憶|きおく}}{{Photrans|少女|しょうじょ}}、{{Photrans|恵|めぐ}}まれた{{Photrans|美貌|びぼう}}それを{{Photrans|憎|にく}}む{{Photrans|魔女|まじょ}}、{{Photrans|裁判|さいばん}}、ふぁっきゅー{{Photrans|言|い}}われも{{Photrans|無|な}}い{{Photrans|嘘|うそ}}　{{Photrans|噂|うわさ}}　{{Photrans|捏造|ねつぞう}}され{{Photrans|余|あま}}す{{Photrans|所|ところ}}{{Photrans|無|な}}く{{Photrans|責|せ}}め{{Photrans|立|た}}てられ{{Photrans|滅|めつ}}する{{Photrans|希望|きぼう}}　{{Photrans|滅|めつ}}する{{Photrans|精神|せいしん}}{{Photrans|蝕|むしば}}まれる{{Photrans|毎日|まいにち}}は{{Photrans|続|つづ}}くDIE!　DIE!!　DIE!!!DIE!　DIE!!　DIE!!!{{Photrans|行|い}}け　{{Photrans|戦|たたか}}え　{{Photrans|骸|むくろ}}は{{Photrans|荒野|こうや}}を{{Photrans|駆|か}}けて{{Photrans|死|し}}を{{Photrans|分|わ}}かつ{{Photrans|本能|ほんのう}}のままに　{{Photrans|甚振|いたぶ}}れ{{Photrans|怪我|けが}}してもどうせ{{Photrans|死|し}}んでるもん{{Photrans|少女|しょうじょ}}、{{Photrans|忌々|いまいま}}しき{{Photrans|日々|ひび}}{{Photrans|刻|きざ}}み{{Photrans|付|つ}}けられた{{Photrans|痕|あと}}が{{Photrans|醜|みにく}}い{{Photrans|少女|しょうじょ}}、{{Photrans|辛|から}}い{{Photrans|誘惑|ゆうわく}}が「{{Photrans|殺|ころ}}せよ」「{{Photrans|殺|ころ}}せ」　そうしようか！ふぁっきゅー{{Photrans|報|むく}}い{{Photrans|戒|いまし}}め　{{Photrans|誘|さそ}}えあいつに{{Photrans|慈悲|じひ}}など{{Photrans|掛|か}}けてなるものか{{Photrans|仇|かたき}}{{Photrans|討|う}}ち　{{Photrans|引裂|ひきさ}}け{{Photrans|今|いま}}こそ{{Photrans|復讐|ふくしゅう}}の{{Photrans|鉄槌|てっつい}}をDIE!　DIE!!　DIE!!!DIE!　DIE!!　DIE!!!{{Photrans|行|い}}け　{{Photrans|戦|たたか}}え{{Photrans|奴|やつ}}らは{{Photrans|殺|ころ}}して{{Photrans|然|しか}}るべき{{Photrans|獣|けもの}}{{Photrans|荒野|こうや}}を　{{Photrans|駆|か}}けてく{{Photrans|骸|むくろ}}は{{Photrans|敵|てき}}の{{Photrans|咽喉|いんこう}}{{Photrans|元|もと}}へ{{Photrans|阿鼻叫喚|あびきょうかん}}　{{Photrans|執行|しっこう}}{{Photrans|猶予|ゆうよ}}{{Photrans|無|な}}し{{Photrans|何|なに}}も{{Photrans|聞|き}}こえない　{{Photrans|耳|みみ}}が{{Photrans|無|な}}いから{{Photrans|何|なに}}も{{Photrans|見|み}}えない　{{Photrans|眼|め}}が{{Photrans|無|な}}いから{{Photrans|何|なに}}も{{Photrans|感|かん}}じない　{{Photrans|神経|しんけい}}が{{Photrans|無|な}}いから{{Photrans|唯|ただ}}、{{Photrans|只管|ひたすら}}{{Photrans|刻|きざ}}む{{Photrans|嗚呼|ああ}}　あの{{Photrans|頃|ころ}}　{{Photrans|夢見|ゆめみ}}た{{Photrans|生命|せいめい}}に{{Photrans|還|かえ}}れないよ{{Photrans|行|い}}け　{{Photrans|戦|たたか}}え{{Photrans|骸|むくろ}}は{{Photrans|真実|しんじつ}}を{{Photrans|知|し}}り{{Photrans|地|ち}}に{{Photrans|還|かえ}}るあの{{Photrans|大空|おおぞら}}　{{Photrans|遥|はる}}かに{{Photrans|橋|はし}}を{{Photrans|架|か}}けて{{Photrans|簸|ひ}}た{{Photrans|行|い}}くよ|translated=少女 那稚气未脱的眼底潜藏着被凌辱的记忆憎恶少女那天赐的美貌的魔女我要审判你 FUCK YOU你制造那些毫无根据的谎言风言风语 把少女逼得走投无路 无处躲藏熄灭她的希望 摧残她的精神每天折磨着她DIE! DIE!! DIE!!!DIE! DIE!! DIE!!!冲啊 战斗啊 我的尸骸在荒野中奔驰 分裂死亡靠着本能攻击就算受了伤 反正我已经死了少女 日夜折磨着她刻在她身上的丑陋疤痕少女 被痛苦地教唆“杀了他们啊”“杀啊”不能这样 FUCK YOU报复惩戒与教唆这就是这个混蛋挂在脸上的慈悲么复仇 撕碎今天就是复仇的铁锤落下的时候DIE! DIE!! DIE!!!DIE! DIE!! DIE!!!冲啊 战斗啊 那些家伙只不过是该杀掉的畜生在荒野奔驰的我的尸骸啊冲向敌人的咽喉惨叫不绝于耳 制裁绝无怜悯什么也听不到 因为我已没有耳朵什么也看不到 因为我已没有眼睛什么也感觉不到 因为我已没有神经只有无尽地屠戮啊啊 已经找不回 梦里才能看到的我的生命冲啊 战斗啊 我的尸骸终回到了真实的净土我在那广阔的天空架起桥梁奔向远方}}</lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>奥井亚纪 - カランドリエ</title>
+      <link href="/1RAJ34F/"/>
+      <url>/1RAJ34F/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zh.moegirl.org.cn/CALENDRIER">CALENDRIER</a></p><p>动画《黄昏少女x失忆》ED &#x2F; アニメ「黄昏乙女×アムネジア」ED</p><p>专辑： カランドリエ<br>歌手： 奥井亜紀<br>作词 : 奥井亜纪<br>作曲 : 田代智一</p><p>カランドリエ<br>Calendrier （法语词意为 日历）<br>编曲：后藤康二</p><lyrics hidden>{{LyricsKai|lstyle=color:;|rstyle=color:;|original=ひとりきりのさびしさひとときのほほえみあなたがくれるものはみんないとしいすぐそばにいても{{PT|触|ふ}}れられないもの{{PT|心|こころ}}は{{PT|月|つき}}のように{{PT|形|かたち}}をかえていくのかなわない{{PT|約束|やくそく}}もかわかない{{PT|涙|なみだ}}もあなたがくれたものはだきしめておどるみつけてくれたこともみつめていることも{{PT|今|いま}}はただ うれしくてときよ とまれこわれた{{PT|心|こころ}}もこごえた{{PT|祈|いの}}りも{{PT|隠|かく}}れた{{PT|月|がつ}}のようにまた{{PT|生|う}}まれ{{PT|変|か}}われる?ほどけない{{PT|苦|くる}}しみもほどかない{{PT|絆|きずな}}もあなたと{{PT|結|むす}}ぶものを{{PT|私|わたし}}{{PT|守|まも}}りたいすぐそばにいても{{PT|触|ふ}}れられないもの{{PT|心|こころ}}は{{PT|月|つき}}のように{{PT|形|かたち}}をかえていくの?かなわない{{PT|约束|さくそく}}もかわかない{{PT|涙|なみだ}}もあなたがくれたものはだきしめておどる|translated=独自一人的寂寥莞尔苍凉的一笑你所给予我的一切都如此地使人怜惜明明近在咫尺却又是那般遥不可及我的心会如明月阴晴圆缺变幻无常吗？不论是那无法企及的约定还是我无法留止的泪水你所给予我的一切皆将拥入胸怀随心而舞随眼所见的东西也好注目凝视之物也罢也唯有现在稍感欣慰时间啊，停下来吧不仅是支离消散的心还是已被冰封的祈愿是否仍能与那云隐之月一般周而复始归而如初吗？不管是无可解脱的苦闷还是无法切断的羁绊你与我所结下的一切都将由我守于心底即便仍近在咫尺也一样遥不可及我的心还会如那明月一般阴晴圆缺变幻无常吗？不管是那无可企及的约定还是我无法留止的泪水你所给予我的一切皆将由我拥入胸怀随心而舞}}</lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>打上花火</title>
+      <link href="/3FNSZDJ/"/>
+      <url>/3FNSZDJ/</url>
+      
+        <content type="html"><![CDATA[<p>烟火绽放</p><p>专辑： BOOTLEG<br>歌手：<br>米津玄師<br>来源：搜索页<br>作词 : 米津玄師</p><p>作曲 : 米津玄師</p><lyrics hidden>{{Photrans2/button}}{{LyricsKai|lstyle=color:;|rstyle=color:;|original=あの{{PT|日見|ひみ}}{{PT|渡|わた}}した{{PT|渚|なぎさ}}を{{PT|今|いま}}も{{PT|思い出|おもいだ}}すんだ{{PT|砂|すな}}の{{PT|上|うえ}}に{{PT|刻|きざ}}んだ{{PT|言葉|ことば}}{{PT|君|きみ}}の{{PT|後ろ姿|うしろすがた}}{{PT|寄|よ}}り{{PT|返|かえ}}す{{PT|波|なみ}}が{{PT|足元|あしもと}}をよぎり{{PT|何|なに}}かを{{PT|攫|さら}}う{{PT|夕凪|ゆうなぎ}}の{{PT|中|なか}}{{PT|日暮|ひぐ}}れだけが{{PT|通|とう}}り{{PT|過|す}}ぎて{{PT|行|い}}く{{PT|パッ|ぱっ}}と{{PT|光|ひか}}って{{PT|咲|さ}}いた{{PT|花火|はなび}}を{{PT|見|み}}ていたきっとまだ{{PT|終|お}}わらない{{PT|夏|なつ}}が{{PT|曖昧|あいまい}}な{{PT|心|こころ}}を{{PT|解|と}}かして{{PT|繋|つな}}いだこの{{PT|夜|よる}}が{{PT|続|つづ}}いて{{PT|欲|ほっ}}しかった「あと{{PT|何度|なんど}}{{PT|君|きみ}}と{{PT|同|おな}}じ{{PT|花火|はなび}}を{{PT|見|み}}られるかな」って{{PT|笑|わら}}う{{PT|顔|かお}}に{{PT|何|なに}}ができるだろうか{{PT|傷|きず}}つくこと{{PT|喜|よろこ}}ぶこと{{PT|繰り返|くりかえ}}す{{PT|波|なみ}}と{{PT|情動|じょうどう}}{{PT|焦燥|しょうそう}}{{PT|最終|さいきみしゅう}}{{PT|列車|れっしゃ}}の{{PT|音|おと}}{{PT|何度|なんど}}でも{{PT|言葉|ことば}}にして{{PT|君|きみ}}を{{PT|呼|よ}}ぶよ{{PT|波間|なみま}}を{{PT|選|えら}}びもう{{PT|一度|いちど}}もう{{PT|二度|にど}}と{{PT|悲|かな}}しまずに{{PT|済|す}}むようにはっと{{PT|息|いき}}を{{PT|飲|の}}めば{{PT|消|き}}えちゃいそうな{{PT|光|ひかり}}がきっとまだ{{PT|胸|むね}}に{{PT|住|す}}んでいた{{PT|手|て}}を{{PT|伸|の}}ばせば{{PT|触|ふ}}れたあったかい{{PT|未来|みらい}}はひそかに{{PT|二人|ふたり}}を{{PT|見|み}}ていた{{PT|パッ|ぱっ}}と{{PT|花火|はなび}}が{{PT|夜|よる}}に{{PT|咲|さ}}いた{{PT|夜|よる}}に{{PT|咲|さ}}いて{{PT|静|しず}}かに{{PT|消|き}}えた{{PT|離|はな}}れないでもう{{PT|少|すこ}}しだけもう{{PT|少|すこ}}しだけ{{PT|パッ|ぱっ}}と{{PT|光|ひか}}って{{PT|咲|さ}}いた{{PT|花火|はなび}}を{{PT|見|み}}ていたきっとまだ{{PT|終|お}}わらない{{PT|夏|なつ}}が{{PT|曖昧|あいまい}}な{{PT|心|こころ}}を{{PT|解|と}}かして{{PT|繋|つな}}いだこの{{PT|夜|よる}}が{{PT|続|つづ}}いて{{PT|欲|ほっ}}しかった{{PT|パッ|ぱっ}}と{{PT|花火|はなび}}が{{PT|夜|よる}}に{{PT|咲|さ}}いた{{PT|夜|よる}}に{{PT|咲|さ}}いて{{PT|静|しず}}かに{{PT|消|き}}えた{{PT|離|はな}}れないでもう{{PT|少|すこ}}しだけもう{{PT|少|すこ}}しだけ|translated=那天眺望着的海岸时至今日仍印在心间沙滩上刻下的那些话与你的背影那翻涌的海浪到底从脚边掠走了什么风平浪静之中只有夕阳渐渐消逝"怦"的一下 光芒绽放烟花焰火映入眼帘夏天一定还没有结束吧暧昧的心结 解开后又紧紧相连多希望今夜不会结束还能再与你看几次同样的焰火呢看着你的笑颜 我又该做些什么呢伤痛亦或是喜悦循环往复的海浪与情愫萌动最后一班列车焦躁的笛声无数次我呼唤着你再度向着那海浪祈愿不再感受那般悲伤就可以了吧一瞬间屏住了呼吸和那将要消逝的光芒一定能留在心中的吧触手可及的那温暖的未来在悄悄守候着两人啊那怦然绽放的花火啊在夜空中绽放后在夜空中绽放后又静静地消失了请不要离开啊再稍微等一会儿吧再稍微等一会儿吧"怦"的一下 光芒绽放烟花焰火映入眼帘夏天一定还没有结束吧暧昧的心结 解开后又紧紧相连多希望今夜不会结束那怦然绽放的花火啊在夜空中绽放后在夜空中绽放后又静静地消失了请不要离开啊再稍微等一会儿吧再稍微等一会儿吧}}</lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>洛天依 - 欲</title>
+      <link href="/30JCA93/"/>
+      <url>/30JCA93/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zh.moegirl.org.cn/index.php?title=%E6%AC%B2&action=edit">欲</a><br>演唱      洛天依<br>UP主     JUSF周存</p><lyrics hidden><poem>我欲成为那不可能成为的人　在这混乱大地上扎根我欲成为那不可能成为的人　毫无愧疚地度过此生然而现实点燃了漫天烟火　焚烧了我的虹膜我的歌声终于也失了魂魄　苍白到不可捉摸若是在知晓一切的他们眼中　我们连活着可能都做不到吧若是在高于一切的他们眼中　我们连生命可能都算不上吧忙碌于这看似繁华的荒野中　坚守着一份脆弱可笑的从容然后抬头再看看寂静的宇宙　告诉我世界还是照常运转吧欲望欲望重复叠加到最后　看呐是谁还憧憬被接受错误错误层层放大到最后　刽子手忘了挥刀的缘由那些個冲锋陷阵的战士背后　贵妇们摇着象牙扇点头我的歌声早就该摒弃魂魄　随波逐流至死最好不过若是在知晓一切的他们眼中　我们连活着可能都做不到吧若是在高于一切的他们眼中　我们连生命可能都算不上吧思想越过六千层腐烂的美梦　浇筑成一台链接神经的水泵我的星球还没学会自西向东　就要被迫融进这条神的河流你不得被奉为君王　就算浑身玉饰金镶就算乐于征战沙场　也不得被奉为君王因你的爱你的恨　你的笑你的泪都恶心到令人发狂尽情憎恶吧厌烦吧愤怒吧悲伤吧逃避吧应对吧反驳吧审判吧你又能拿我怎么样若是在见证一切的他们眼中　我们连绝望可能都多余了吧若是在深爱一切的他们眼中　我们连相残可能都不配了吧深陷于这正义粉饰的愚蠢中　教唆着臣民阻挠光辉的悸动不如抬头再看看绚烂的星空　告诉我世界还能照常毁灭吗</poem></lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>洛天依,DELA - 我对孤独一无所知</title>
+      <link href="/29A0HTQ/"/>
+      <url>/29A0HTQ/</url>
+      
+        <content type="html"><![CDATA[<p>我对孤独一无所知<br>演唱  洛天依<br>UP主  DELA<br>链接 <a href="https://www.bilibili.com/video/av42228720">bilibili</a></p><lyrics hidden><poem>{{color|#3F143F|是时候来交代你我的罪状写作少不更事　读作负隅顽抗以为只要在深夜抑制呼号便值得登上高台昂首索求嘉奖承认吧　我们什么都不知道如今才明白孤独并非孤独的全貌我们所仰仗的那株脆弱的稻草甚至比不上作家笔下的火柴牢靠从来没有人许诺会给我们天堂苦尽后甘来　是什么让我如此臆想若再来一次　我绝不再选择盛放这样卫道士就不会从正面朝我心　开上一枪}}“你竟不知愚民们的赞美声经不起推敲。”“不仅接受了，还视若珍宝。”“不知孤高。”“不知悔改。”“罪大恶极。”“罪无可恕。”伊卡洛斯的崇拜者们被押解至刑场。冰冷的枪口再度抵上了他们的后脑勺。{{color|#3F143F|我在后悔我的天真与轻狂将生命此等常态曲解为异样四分五裂了还曾固执奢望悲哀过期的那天也许总会来到说得对　我们什么都不知道最后才发现漫长也仅是孤独一角我们所歌颂的不切实际的坚强无法活在任何向谎言妥协的地方从来没有人许诺会给我们天堂高山和流水　是什么让我如此嚣张若再来一次　我绝不再选择分享这样卫道士就没机会将我的情感　尽数围剿}}</poem></lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>螺鈿の骨</title>
+      <link href="/1YBQVQ3/"/>
+      <url>/1YBQVQ3/</url>
+      
+        <content type="html"><![CDATA[<p>作詞：ばぶちゃん<br>作曲：ばぶちゃん<br>編曲：ばぶちゃん<br>歌：初音ミク</p><lyrics hidden>{{Photrans2/button}}{{LyricsKai|lstyle=text-align:gradient;color:#ff1e00;font-size:x-8em;text-shadow:-1.2px -1.2px 0 #b2f1d8; letter-spacing:0.05em; white-space:nowrap;|rstyle=text-align:gradient;color:#ff1e00;font-size:x-8em;text-shadow:-1.2px -1.2px 0 #b2f1d8; letter-spacing:0.05em; white-space:nowrap;|reserveWidth=10px|original={{PT|一|ひと}}つあなたがくれた　くちづけを思い出して{{PT|倖|しあわ}}せだった{{PT|慕|した}}っております{{PT|背|せ}}中に{{PT|指|ゆび}}でなぞれば{{PT|目蓋|まぶた}}も{{PT|熱|ねつ}}くなる{{PT|焦|こ}}がれる想い{{PT|火|ひ}}ぢりぢりと{{PT|誘|さそ}}われ{{PT|花蝶|かちょう}}も{{PT|焼|や}}き{{PT|尽|つ}}くす{{PT|螺鈿|らでん}}の{{PT|骨|ほね}}まで愛してほしいの{{PT|白磁|はくじ}}の{{PT|首筋|くびすじ}} {{PT|噛|か}}み付くいて雨の色も{{PT|散|ち}}りゆく花もみんな貴方が{{PT|語|かた}}ってくれた愛の{{PT|唄|うた}}も{{PT|揺|ゆ}}れゆく{{PT|鼓動|こどう}}もみんな貴方が{{PT|騙|かた}}ってくれた{{PT|此|こ}}の{{PT|侭|まま}}{{PT|月|つき}}よ{{PT|沈|しず}}まぬやうに{{PT|願|ねが}}えど貴方は{{PT|居|い}}なくなる螺鈿の骨まで愛してほしいの白磁の首筋噛み付いて{{PT|濡羽|ぬれは}}の黒髪{{PT|解|ほど}}けるままに{{PT|送|おく}}った{{PT|桜花|おうか}}の{{PT|小指|こゆび}}さえ{{PT|灰|はい}}となったわたくしのおめめに{{PT|咲|さ}}く{{PT|花|はな}}をまた{{PT|愛|め}}でて欲しい|translated=你給予我的　那一吻光是回想起來便如此幸福我深深戀慕著你　只要用手指劃過脊背　就連眼瞼也會染上熱度灼人的戀火熊熊燃燒火光誘得花蝶燃燒殆盡願你連這螺鈿之骨也一併愛憐輕咬白瓷的頸項雨絲的色彩也好凋零的花朵也罷你都為我傾訴愛戀的歌謠也好輕顫的心跳也罷皆是你的謊言月兒啊　請高掛夜空莫要沉我已這般祈求你卻依然離去願你連這螺鈿之骨也一併愛憐輕咬白瓷的頸項連同那　黑潤的長髮四下散開逝去的櫻花般的小指願你將　化作灰燼的我眼中盛開的花朵　再次愛憐}}</lyrics><!-- <script src="https://sucicada.github.io/Moegirl-Lyric-Template-Parser/moelyrics.js"></script> -->]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谭维维 - 歌者</title>
+      <link href="/1MS6GZ4/"/>
+      <url>/1MS6GZ4/</url>
+      
+        <content type="html"><![CDATA[<p>歌者  </p><p>广播剧 最终季 主题曲  </p><p>作词：刘慈欣小说《三体》&#x2F;钟文@goodsongs<br>作曲：刘77@goodsongs&#x2F;古壹@GoodSongs<br>编曲：何天程<br>制作人：钟文@GoodSongs  </p><lyrics hidden>我看到了我的爱恋我飞到她的身边我捧出给她的礼物那是一小块凝固的时间时间上有美丽的条纹摸起来像浅海的泥一样柔软她把时间涂满全身然后拉起我飞向存在的边缘这是灵态的飞行 (灵态的飞行)我们眼中的星星 (像幽灵)星星眼中的我们也像幽灵时空全都是锋利的羽翼多维宇宙任我自由地横行跌落二维里化作了泡影只有串串空荡荡的回音几个纪元前静默的生命手捧火球变得如此的坚定谁能守住时间宏大的秘密如此笃定 便给岁月以文明我看到了我的爱恋我飞到她的身边我捧出给她的礼物那是一小块凝固的时间时间上有美丽的条纹摸起来像浅海的泥一样柔软她把时间涂满全身然后拉起我飞向存在的边缘这是灵态的飞行 (灵态的飞行)我们眼中的星星 (像幽灵)星星眼中的我们也像幽灵时空全都是锋利的羽翼多维宇宙任我自由地横行跌落二维里化作了泡影只有串串空荡荡的回音几个纪元前静默的生命手捧火球变得如此的坚定谁能守住时间宏大的秘密如此笃定 便给岁月以文明</lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>镜音リン、GUMI - いーあるふぁんくらぶ</title>
+      <link href="/2FKD477/"/>
+      <url>/2FKD477/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zh.moegirl.org.cn/1_2_fan_club">いーあるふぁんくらぶ</a></p><p>作词、作曲、调教みきとP<br>演唱镜音リン、GUMI<br>曲绘ヨリ<br>视频りゅうせー<br>Enginner友達募集P</p><lyrics hidden>{{Photrans2/button}}{{LyricsKai|width=120%|reserveWidth=10px|lstyle=color:red;|rstyle=color:blue;|original={{lang|zh|{{color|red|红色：原歌词}}}}<br>{{lang|zh|{{color|blue|蓝色：翻译}}}}<br> 「いーあるふぁんくらぶ」うっ！はっ！うっ！はっ！うっ！はっ！うっ！はっ！うっ！はっ！うっ！はっ！うっ！はっ！うっ！はっ！{{ruby|神戸|こうべ}}{{ruby|中央区|ちゅうおうく}}{{ruby|元町|もとまち}}。（{{ruby|駅前|えきまえ}}）{{ruby|今日|きょう}}から ドキドキニイハオハンユー{{ruby|講座|こうざ}}{{ruby|大人|おとな}}、{{ruby|中高生|ちゅうこうせい}}、おばちゃんに 「...こんにちは」「ダメダメここではあなたも “{{ruby|ｲ尓好|ニーハオ}}”！」マジで...。テキスト{{ruby|三|さん}}ページ（{{ruby|早|はや}}くも)　ここはとにかく{{ruby|羞恥心|しゅうちしん}}に{{ruby|勝|か}}つぞ{{ruby|一万|いちまん}}{{ruby|三千|さんぜん}}{{ruby|円|えん}}の{{ruby|月謝|げっしゃ}}は （{{ruby|安|やす}}くない）{{ruby|好好大家|ハオハオダッジャー}}　ご{{ruby|機嫌|きげん}}いかが『お{{ruby|母|かあ}}さん　お{{ruby|馬|うま}}さん』（{{ruby|媽 馬|マーッマー}}）『ここはどこ　{{ruby|君|きみ}}は{{ruby|誰|だれ}}』 （{{ruby|ｲ尓是誰阿|ニーシーシェア}}）{{ruby|大|だい}}{{ruby|好|す}}きなワン・リーホンに {{ruby|大|だい}}{{ruby|好|す}}きだって{{ruby|言|い}}うためハイハイチャイナ ちょちょ{{ruby|夢心地|ゆめごこち}}いーあるふぁんくらぶだんだん{{ruby|君|きみ}}と{{ruby|同|おな}}じ{{ruby|言葉|ことば}}が{{ruby|使|つか}}えるねうぉあいにー {{ruby|言|い}}えるかな（{{ruby|再見|ツァイチェン}}）<br>（{{ruby|多少銭|ドゥーオシャオチェアン}}）<br>（{{ruby|好好大家|ハオハオダッジャー}}）<br>（{{ruby|ｲ尓是誰阿|ニーシーシェア}}）<br>（{{ruby|我爱ｲ尓|ウォアイニー}}）そこで{{ruby|知|し}}り{{ruby|合|あ}}った{{ruby|女子高生|じょしこうせい}} （みかちゃん）　{{ruby|曰|いわ}}く、{{ruby|台湾|たいわん}}でジェイ・チョウのコンサートそれは{{ruby|行|い}}かなきゃだめだ （ところで）みかちゃん しれっと{{ruby|言|い}}ってるけど{{ruby|海外|かいがい}}だよ？まじで... エンジンかかってんな （みかちゃん）ここはとにかく{{ruby|便乗|びんじょう}}して{{ruby|頑張|がんば}}るか{{ruby|六万|ろくまん}}{{ruby|数千|すうせん}}の{{ruby|旅費|りょひ}}も（{{ruby|安|やす}}くない）それでは{{ruby|再見|ザーイジャン}}バイト{{ruby|探|さが}}さなきゃ『すみません、お{{ruby|嬢|じょう}}さん』　({{ruby|小姐|シャオッジェ}})『これ一つ　いくらでしょう』({{ruby|多少銭|ドゥーオシャオチェアン}}){{ruby|天国|てんごく}}のレスリー・チャンにおやすみなさいって{{ruby|言|い}}うためハイハイチャイナ　ちょちょ{{ruby|夢心地|ゆめごこち}}　いーあるふぁんくらぶだんだん {{ruby|君|きみ}}の{{ruby|伝|つた}}えたい{{ruby|気持|きも}}ちがわかってく{{ruby|憧|あこが}}れて　{{ruby|夢中|むちゅう}}になって　{{ruby|一ヶ月|いっかげつ}}{{ruby|二ヶ月|にかげつ}}{{ruby|半年|はんとし}}{{ruby|過|す}}ぎたリア{{ruby|友|とも}}は{{ruby|少|すこ}}し{{ruby|減|へ}}ったけど　それもしかたないやハイハイチャイナ ちょちょ{{ruby|夢心地|ゆめごこち}}いーあるふぁんくらぶだんだん{{ruby|君|きみ}}と{{ruby|同|おな}}じ{{ruby|言葉|ことば}}が{{ruby|使|つか}}えるねハイハイチャイナ　ちょちょ{{ruby|夢心地|ゆめごこち}}　いーあるふぁんくらぶだんだん {{ruby|君|きみ}}の{{ruby|伝|つた}}えたい{{ruby|気持|きも}}ちがわかってくうぉあいにー {{ruby|言|い}}わせてようぉあいにー {{ruby|言|い}}えるかな|translated=歌詞:Zipfile 転載<br>翻译：{{lj|baba98/なななななに}}<br><big>「1 2 fan club」/「一 二 粉丝俱乐部」</big>呜！哈！呜！哈！呜！哈！呜！哈！呜！哈！呜！哈！呜！哈！呜！哈！神户中央区元町。（车站前）从今开始 心跳不已{{ruby|ニイハオハンユー|你好汉语|ja|zh}}讲座对大人、高中生、老婆婆说 「...你好」「不行不行在这里要说 “{{ruby|ｲ尓好|ニーハオ|ja}}”！」真的...。请翻开课本第三页（早翻好了)　在这儿无论如何都要克服羞耻心一万三千日元的月学费 （不便宜）{{ruby|好好大家|ハオハオダッジャー|ja}}　开始学习你好吗『妈妈　马先生』（{{ruby|媽 馬|マーッマー|ja}}）『这里是哪里　你是谁』 （{{ruby|ｲ尓是誰阿|ニーシーシェア|ja}}）对最喜欢的{{ruby|ワン・リーホン|王力宏|ja|zh}}说 我最喜欢你了Hi Hi China 悄悄如在梦中1 2 fan club渐渐地能和你使用同一种语言了呢{{ruby|うぉあいにー|我爱你|ja|zh}} 能否说出呢{{lj|（{{ruby|再見|ツァイチェン}}）<br>（{{ruby|多少銭|ドゥーオシャオチェアン}}）<br>（{{ruby|好好大家|ハオハオダッジャー}}）<br>（{{ruby|ｲ尓是誰阿|ニーシーシェア}}）<br>（{{ruby|我愛ｲ尓|ウォアイニー}}）}}在那里认识了女子高中生 （mika酱）　听说，在台湾有{{ruby|ジェイ・チョウ|Jay Chou/周杰伦|ja|zh}}的演唱会看来不得不去那儿啊 （不过话说回来）mika酱 虽然平静地说了但那却是海外啊？真的... 别发动引擎啊 （mika酱）在这里无论如何努力搭便车吧六万数千的旅费也（不便宜）那么{{ruby|再見|ザーイジャン|ja}}必须要去找零工啊『打扰一下、小姐』　({{ruby|小姐|シャオッジェ|ja}}})『这个一个　卖多少元』({{ruby|多少銭|ドゥーオシャオチェアン|ja}})向在天国的{{ruby|レスリー・チャン|Leslie Chang/张国荣|ja|zh}}说请晚安Hi Hi China 悄悄如在梦中1 2 fan club渐渐地能理解你传达的心意了呢憧憬着　想在梦中一般　过了一个月 三个月 半年三次元朋友逐渐地减少　但却没有办法啊Hi Hi China 悄悄如在梦中1 2 fan club渐渐地能和你使用同一种语言了呢Hi Hi China　悄悄如在梦中　1 2 fan club渐渐地能理解你传达的心意了呢{{ruby|うぉあいにー|我爱你|ja|zh}} 让我说出吧{{ruby|うぉあいにー|我爱你|ja|zh}} 能否说出呢}}</lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>长泽雅美 - セーラー服と机関铳</title>
+      <link href="/BTJQFT/"/>
+      <url>/BTJQFT/</url>
+      
+        <content type="html"><![CDATA[<lyrics hidden>{{Photrans2/button}}{{LyricsKai|lstyle=color:;|rstyle=color:;|original=さよならは{{PT|別|わか}}れの {{PT|言葉|ことば}}じゃなくて{{PT|再|ふたた}}び{{PT|逢|あ}}うまでの {{PT|遠|とお}}い{{PT|約束|やくそく}}{{PT|夢|ゆめ}}のいた{{PT|場所|ばしょ}}に {{PT|未練|みれん}}{{PT|殘|のこ}}しても{{PT|心寒|こころさむ}}いだけさこのまま{{PT|何時間|なんじかん}}でも {{PT|抱|だ}}いていたいけどただこのまま {{PT|冷|つめ}}たい{{PT|頬|ほお}}を{{PT|暖|あたた}}めたいけど{{PT|都會|とかい}}は{{PT|秒|びょう}}{{PT|刻|きざ}}みのあわただしさ{{PT|戀|こい}}も{{PT|コンクリート|こんくりーと}}の{{PT|籠|かご}}\の{{PT|中|なか}}{{PT|君|きみ}}がめぐり{{PT|逢|あ}}う {{PT|愛|あい}}に{{PT|疲|つか}}れたらきっともどっておいで{{PT|愛|あい}}した{{PT|男|おとこ}}たちを {{PT|思い出|おもいで}}に{{PT|替|か}}えていつの{{PT|日|ひ}}にか {{PT|僕|ぼく}}のことを{{PT|想い出|おもいで}}すがいいただ{{PT|心|こころ}}の{{PT|片隅|かたすみ}}にでも {{PT|小|ちー}}さく{{PT|メモ|めも}}して{{PT|スーツケース|すーつけーす}} いっぱいにつめこんだ{{PT|希望|きぼう}}という{{PT|名|めい}}の {{PT|重|おも}}い{{PT|荷物|にもつ}}を{{PT|君|きみ}}は{{PT|軽々|かるがる}}と きっと{{PT|持|も}}ち{{PT|上|あ}}げて{{PT|笑顏|えがお}}を{{PT|見|み}}せるだろう{{PT|愛|あい}}した{{PT|男|おとこ}}たちを かがやきに{{PT|替|か}}えていつの{{PT|日|ひ}}にか {{PT|僕|ぼく}}のことを{{PT|想い出|おもいで}}すがいいただ{{PT|心|こころ}}の{{PT|片隅|かたすみ}}にでも {{PT|小|ちー}}さく{{PT|メモ|めも}}して|translated=再见不是分别的言语是直到再次相会的誓约在梦幻之地,留下遗憾也仅是心寒虽然想就这样长久的拥抱虽然想就只这样温暖冰凉的脸城市分秒不错的运转爱恋也困在水泥笼里如果你因为遇到的爱而疲惫那就回来吧爱过的男人成了回忆有那么一天你能想起我就好那怕只在心灵的深处留下毫许的记录装满行李的是称为希望的重压你一定会轻轻的托起还要表露出笑容爱过的男人成了光环有那么一天你能想起我就好那怕只在心灵的深处留下毫许的记录}}</lyrics>]]></content>
+      
+      
+      <categories>
+          
+          <category> lyrics </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>artist</title>
+      <link href="/NK5M7/"/>
+      <url>/NK5M7/</url>
+      
+        <content type="html"><![CDATA[<ul><li>影视<ul><li>攻壳机动队(分别todo)</li><li>杀戮都市</li></ul></li><li>音楽と歌（おんがく　うた）<ul><li>Expres</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> mind </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>README</title>
+      <link href="/1VWTGBN/"/>
+      <url>/1VWTGBN/</url>
+      
+        <content type="html"><![CDATA[<h2 id="todo-study-java-network-fragment-netty-akka"><a href="#todo-study-java-network-fragment-netty-akka" class="headerlink" title="todo study- java network fragment    - netty    - akka"></a>todo study<br>- java network fragment<br>    - netty<br>    - akka</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Question</title>
+      <link href="/17R2ARR/"/>
+      <url>/17R2ARR/</url>
+      
+        <content type="html"><![CDATA[<p>CPU乱序执行优化</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>WSL2 -- Windows10 环境中运行 Linux （无缝衔接，开发利器）</title>
+      <link href="/3XQPDFE/"/>
+      <url>/3XQPDFE/</url>
+      
+        <content type="html"><![CDATA[<h3 id="WSL2-是什么"><a href="#WSL2-是什么" class="headerlink" title="WSL2 是什么"></a>WSL2 是什么</h3><p>全称为 Windows Subsystem for Linux2。是一个能在Windows上运行Linux运行环境的工具。是WSL的第二代。</p><p>简单来说就是Windows下的Linux虚拟机。</p><h3 id="比虚拟机好在哪里"><a href="#比虚拟机好在哪里" class="headerlink" title="比虚拟机好在哪里"></a>比虚拟机好在哪里</h3><ul><li>启动速度超快。文件访问跨系统访问无限制（因为两个系统之间的目录是通过网络映射挂载的）</li><li>Windows、Linux 命令混合使用。无论在哪个系统的终端，都可以使用另一个系统的命令。（比如在Linux中使用<code>explorer.exe .</code> 看看会发生什么）</li></ul><h3 id="比WSL1好在哪"><a href="#比WSL1好在哪" class="headerlink" title="比WSL1好在哪"></a>比WSL1好在哪</h3><p>最主要体现在网络隔离、以及进程管理（比如ps）。<br>WSL2使用类似NAT的虚拟机网络模式。这样的好处就是Linux和Windows的网段是隔离的。<br>而WSL1更像是运行在Windows上的一个程序，所以网络IP、端口、进程状态等都是用的Windows宿主机。<br>所以这么来看WSL2更像是纯粹的一个虚拟机了。</p><h3 id="安装-amp-配置"><a href="#安装-amp-配置" class="headerlink" title="安装&amp;配置"></a>安装&amp;配置</h3><ul><li><p><a href="https://zhuanlan.zhihu.com/p/69121280">在 Windows 中运行 Linux：WSL 2 使用入门</a></p></li><li><p><a href="https://www.lijyyh.com/2020/07/linuxwindowswindows-subsystem-for.html">適用於Linux的Windows子系統(Windows Subsystem for Linux；WSL)</a></p></li></ul><h3 id="进阶提升效率"><a href="#进阶提升效率" class="headerlink" title="进阶提升效率"></a>进阶提升效率</h3><ul><li><p>Windows Terminal</p><p>比PowerShell 更好用、更美观的Windows终端。支持窗口多开，WSL直开。</p><p><a href="https://zhuanlan.zhihu.com/p/199748950">玩转WSL(2)之安装并配置Windows Terminal</a></p></li><li><p>Ctrl+Alt+T 开启终端。</p><p>下载<strong>WinHotKey</strong>，设置Windows Terminal默认窗口为WSL。</p><p>体验原生Linux终端的快感。</p></li></ul><h3 id="肯定有用的脚本"><a href="#肯定有用的脚本" class="headerlink" title="肯定有用的脚本"></a>肯定有用的脚本</h3><ul><li><input disabled type="checkbox"> todo</li></ul><h4 id="衍生资源"><a href="#衍生资源" class="headerlink" title="衍生资源"></a>衍生资源</h4><p><a href="https://www.v2ex.com/t/587642">WSL 和 WSL2 简单对比</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于Akka 和Netty的对比</title>
+      <link href="/2WFSKD3/"/>
+      <url>/2WFSKD3/</url>
+      
+        <content type="html"><![CDATA[<p>撰写说明:<br>Akka 设计模型<br>Netty 设计模型<br>Akka 优劣势<br>Netty 优劣势<br>Akka 和 Netty互相转换</p><h2 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h2><p>关键词:<br>    事件驱动<br>    NIO<br>    对TCP UDP 的socket封装</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>study</title>
+      <link href="/3K7Z5T9/"/>
+      <url>/3K7Z5T9/</url>
+      
+        <content type="html"><![CDATA[<p>计算机<br>Linux 系统内存模型<br>内存页面<br>Linux 文件系统设计原因<br>shiro 设计原理<br>分布式锁<br>apache2 到 nginx 的进化</p><p>社会学<br>中央式管理的思考。系统的中央式管理的必要性。<br>中央集权，地方分权。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> TODO </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>task</title>
+      <link href="/197XPS5/"/>
+      <url>/197XPS5/</url>
+      
+        <content type="html"><![CDATA[<ul><li><input checked disabled type="checkbox"> 购物<ul><li><input checked disabled type="checkbox"> 上衣</li><li><input checked disabled type="checkbox"> 背包</li></ul></li><li><input disabled type="checkbox"> 思维导图</li><li><input disabled type="checkbox"> </li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> TODO </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>web</title>
+      <link href="/AWJE2H/"/>
+      <url>/AWJE2H/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://github.com/nocater/scholarship">https://github.com/nocater/scholarship</a><br><a href="https://github.com/JiXianghao/ScholarshipSystem">https://github.com/JiXianghao/ScholarshipSystem</a><br><a href="https://gitee.com/junwenxuxuuu/scholarship?%5C_from=gitee%5C_search">https://gitee.com/junwenxuxuuu/scholarship?\_from=gitee\_search</a><br><a href="https://gitee.com/luokaihu/_admin/jiangxuejin?%5C_from=gitee%5C_search">https://gitee.com/luokaihu\_admin/jiangxuejin?\_from=gitee\_search</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> TODO </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux_inti</title>
+      <link href="/22WG6K9/"/>
+      <url>/22WG6K9/</url>
+      
+        <content type="html"><![CDATA[<h3 id="apt"><a href="#apt" class="headerlink" title="apt"></a>apt</h3><pre class="line-numbers language-none"><code class="language-none">sudo -vsudo cp &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak echo -e &quot;deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiversedeb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiversedeb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiversedeb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiversedeb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiversedeb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiversedeb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiversedeb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiversedeb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiversedeb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.listsudo apt update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h3><pre class="line-numbers language-none"><code class="language-none">sudo -vcurl -fsSL https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;ubuntu&#x2F;gpg | sudo apt-key add -sudo add-apt-repository &quot;deb [arch&#x3D;amd64] https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;ubuntu $(lsb_release -cs) stable&quot;sudo apt install docker-ce -ysudo service docker start sudo usermod -aG docker $&#123;USER&#125;sudo service docker restartsudo mkdir -p &#x2F;etc&#x2F;docker&#x2F; ; sudo touch &#x2F;etc&#x2F;docker&#x2F;daemon.jsonecho &#39;&#123;&quot;registry-mirrors&quot;: [&quot;https:&#x2F;&#x2F;docker.mirrors.ustc.edu.cn&quot;]&#125;&#39; | sudo tee &#x2F;etc&#x2F;docker&#x2F;daemon.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="node"><a href="#node" class="headerlink" title="node"></a>node</h3><pre class="line-numbers language-none"><code class="language-none">sudo -vcurl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_14.x | sudo -E bash -echo -e &quot;echo deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;nodesource&#x2F;deb_14.x focal main echo deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;nodesource&#x2F;deb_14.x focal main &quot;| tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;nodesource.listsudo apt install -y nodejsnpm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="scala"><a href="#scala" class="headerlink" title="scala"></a>scala</h3><pre class="line-numbers language-none"><code class="language-none">sudo apt-get install openjdk-8-jdk -ysudo apt install scala -y<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="ruby"><a href="#ruby" class="headerlink" title="ruby"></a><del>ruby</del></h3><pre class="line-numbers language-none"><code class="language-none">sudo add-apt-repository ppa:brightbox&#x2F;ruby-ngsudo apt-get updatesudo apt-get purge --auto-remove rubysudo apt-get install ruby2.7 ruby2.7-dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h3><pre class="line-numbers language-none"><code class="language-none"># change sourcemkdir ~&#x2F;.pipecho -e &quot; [global]index-url &#x3D; https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple&quot; &gt; ~&#x2F;.pip&#x2F;pip.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h3><pre class="line-numbers language-none"><code class="language-none">echo -e &quot;set ts&#x3D;4set expandtabset autoindent&quot; &gt;&gt; ~&#x2F;.vimrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h4><pre class="line-numbers language-none"><code class="language-none">echo -e &quot;set -g mode-mouse onset -g mouse-resize-pane onset -g mouse-select-pane onset -g mouse-select-window on&quot; &gt;&gt; ~&#x2F;.tmux<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="supervisor"><a href="#supervisor" class="headerlink" title="supervisor"></a>supervisor</h4><pre class="line-numbers language-none"><code class="language-none">sudo apt install supervisor echo -e &quot;[Unit]Description&#x3D;Process Monitoring and Control DaemonAfter&#x3D;rc-local.service nss-user-lookup.target[Service]Type&#x3D;forkingExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;supervisord -c &#x2F;etc&#x2F;supervisor&#x2F;supervisord.conf[Install]WantedBy&#x3D;multi-user.target&quot; | tee &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;supervisord.servicesudo systemctl enable supervisordsudo systemctl is-enabled supervisord<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> TOOL </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Actor</title>
+      <link href="/22V8YFX/"/>
+      <url>/22V8YFX/</url>
+      
+        <content type="html"><![CDATA[<p>Actor并发模型</p><blockquote><p>粒度比线程小很多<br>问题:  与协程的对比</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Akka </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>README</title>
+      <link href="/1VWTGBN/"/>
+      <url>/1VWTGBN/</url>
+      
+        <content type="html"><![CDATA[<p>关键词<br>共享内存<br>位置透明<br>actor模型</p><p>每个应用都需要创建一个ActorSystem</p><p>actor的关键在于：</p><ul><li>分而治之，每一个节点（actor）都是一样的结构，但是相互之间存在层级结构（树形）。这样能够做到任务下发。子actor再创建子子actor。</li><li>其次就是监管。对于多子任务系统来说，中央式监管是必须的。</li></ul><p>参考资料<br><a href="https://blog.csdn.net/liubenlong007/article/details/53782966">https://blog.csdn.net/liubenlong007/article/details/53782966</a><br><a href="https://segmentfault.com/blog/akka">https://segmentfault.com/blog/akka</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Akka </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Flink 风水哲学</title>
+      <link href="/3P1A0SC/"/>
+      <url>/3P1A0SC/</url>
+      
+        <content type="html"><![CDATA[<p>flink一般会用在哪里: 实时etl, 实时数仓, 实时报告分析, 监控, 推荐</p><p>我们将这些场景抽象出来，能看到我们的flink在里面做了一个什么作用:<br>    是的, 很简单: 读取一个或多个输入源的数据, 然后经过一系列运算, 讲结果输出到其他系统上, 或者触发某些操作.<br>更抽象来看, 这个程序的目的就是 输入 -&gt; 计算 -&gt; 输出 (给图)。<br>是的简单到可能有些蠢的道理，而这也是所有程序的根本意义。<br>而flink存在的意义从宏观上来讲就是用来解决这个 输入 -&gt; 计算 -&gt; 输出 3阶段的过程.<br>那么从微观上来看 flink 又是为了解决哪些具体问题呢.</p><p>从 spark 来看, 在 hadoop 生态环境中, 计算引擎主要处理的是: 大量, 相似 的结构化数据. 然后对其 做集合处理计算.</p><p><a href="https://zh.wikipedia.org/wiki/%E8%B3%87%E8%A8%8A%E5%93%B2%E5%AD%B8">https://zh.wikipedia.org/wiki/%E8%B3%87%E8%A8%8A%E5%93%B2%E5%AD%B8</a><br>Scala 在大数据处理方面有何优势？ - 紫杉的回答 - 知乎<br><a href="https://www.zhihu.com/question/27630156/answer/37488883">https://www.zhihu.com/question/27630156/answer/37488883</a><br>道与道 - 张汉东的文章 - 知乎<br><a href="https://zhuanlan.zhihu.com/p/74256069">https://zhuanlan.zhihu.com/p/74256069</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Flink </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>StreamingFileSink</title>
+      <link href="/2J28SH3/"/>
+      <url>/2J28SH3/</url>
+      
+        <content type="html"><![CDATA[<p>snapshotState 和 notifyCheckpointComplete 时机</p><p>先<code>snapshotState</code>, 为了关闭文件. 文件在关闭之前都是空的. </p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token class-name">InProgressFileWriter<span class="token punctuation">.</span>PendingFileRecoverable</span> <span class="token function">closePartFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span><span class="token class-name">InProgressFileWriter<span class="token punctuation">.</span>PendingFileRecoverable</span> pendingFileRecoverable <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token keyword">if</span> <span class="token punctuation">(</span>inProgressPart <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token comment">// 关闭文件</span>pendingFileRecoverable <span class="token operator">=</span> inProgressPart<span class="token punctuation">.</span><span class="token function">closeForCommit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> pendingFileRecoverablesForCurrentCheckpoint<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>pendingFileRecoverable<span class="token punctuation">)</span><span class="token punctuation">;</span>inProgressPart <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token keyword">return</span> pendingFileRecoverable<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>普通的一个数据到来时候:<br>从<code>invoke</code>走起.<br>若触发滚动条件<br><code>org.apache.flink.streaming.api.functions.sink.filesystem.Bucket#rollPartFile</code><br>否则添加到<code>writer</code>中<br>我们用的是<code>org.apache.flink.formats.compress.writers.HadoopCompressionBulkWriter</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Flink </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>流程</title>
+      <link href="/16099BA/"/>
+      <url>/16099BA/</url>
+      
+        <content type="html"><![CDATA[<p>假设<br>.map(new RichMapFunction(){<br>…})</p><p>RichMapFunction首先会在client实例化一次.<br>然后flink会将map对象序列化分发出去.</p><p>ClosureCleaner 检查函数闭包可序列化</p><p><a href="https://flink.apache.org/visualizer/">https://flink.apache.org/visualizer/</a></p><p><a href="https://github.com/bethunebtj/flink_tutorial/blob/master/%E8%BF%BD%E6%BA%90%E7%B4%A2%E9%AA%A5%EF%BC%9A%E9%80%8F%E8%BF%87%E6%BA%90%E7%A0%81%E7%9C%8B%E6%87%82Flink%E6%A0%B8%E5%BF%83%E6%A1%86%E6%9E%B6%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.md">https://github.com/bethunebtj/flink_tutorial/blob/master/%E8%BF%BD%E6%BA%90%E7%B4%A2%E9%AA%A5%EF%BC%9A%E9%80%8F%E8%BF%87%E6%BA%90%E7%A0%81%E7%9C%8B%E6%87%82Flink%E6%A0%B8%E5%BF%83%E6%A1%86%E6%9E%B6%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.md</a></p><p>org.apache.flink.runtime.taskexecutor.TaskExecutor#submitTask<br>的时候创造了 Task</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Flink </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>README</title>
+      <link href="/1VWTGBN/"/>
+      <url>/1VWTGBN/</url>
+      
+        <content type="html"><![CDATA[<ul><li>git查看远程分支:  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> branch <span class="token parameter variable">-a</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>git 创建新分支<br>  <code>git branch xxx</code></li><li>查看当前分支流信息<br>  <code>git reflog show</code></li></ul><h2 id="token"><a href="#token" class="headerlink" title="token"></a>token</h2><ul><li>注意:<ul><li>github:<ul><li>environment secrets设置之后, 需要在action yaml中指定environment, 才能生效.</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Kerberos 身份验证因时间设置不同导致失败</title>
+      <link href="/14S9XF/"/>
+      <url>/14S9XF/</url>
+      
+        <content type="html"><![CDATA[<p>有时候我们在有<code>kerberos</code>的<code>Hadoop</code>集群节点上执行 Hadoop 有关操作会遇到:<br><code>javax.security.auth.login.LoginException: Clock skew too great (37)</code></p><pre class="line-numbers language-none"><code class="language-none">32295:Caused by: org.apache.hadoop.security.KerberosAuthException: failure to login: for principal: xxxxxxxxx from keytab &#x2F;xxxxxxxx javax.security.auth.login.LoginException: Clock skew too great (37) - PREAUTH_FAILED32296-at org.apache.hadoop.security.UserGroupInformation.doSubjectLogin(UserGroupInformation.java:1992)32297-at org.apache.hadoop.security.UserGroupInformation.loginUserFromKeytabAndReturnUGI(UserGroupInformation.java:1360)32298-at org.apache.hadoop.security.UserGroupInformation.loginUserFromKeytab(UserGroupInformation.java:1140)32299-at org.apache.flume.auth.KerberosAuthenticator.authenticate(KerberosAuthenticator.java:176)32300-... 23 more32301-Caused by: javax.security.auth.login.LoginException: Clock skew too great (37) - PREAUTH_FAILED32302-at com.sun.security.auth.module.Krb5LoginModule.attemptAuthentication(Krb5LoginModule.java:804)32303-at com.sun.security.auth.module.Krb5LoginModule.login(Krb5LoginModule.java:617)32304-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)32305-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>简单来说问题的原因是:</p><blockquote><p>服务器和管理节点的时间相差过大。如果环境中计算机的系统时间与域控制器或其他控制器的系统时间相差 5 分钟以上，则 Kerberos 身份验证会失败。</p></blockquote><p>所以只要同步一下时间就好。可以使用<code>ntp</code>等工具。</p><p>参考:<br><a href="https://docs.vmware.com/cn/vRealize-Orchestrator/8.2/com.vmware.vrealize.orchestrator-use-plugins.doc/GUID-D452862F-7E6C-453E-8E13-DBC231881E02.html">https://docs.vmware.com/cn/vRealize-Orchestrator/8.2/com.vmware.vrealize.orchestrator-use-plugins.doc/GUID-D452862F-7E6C-453E-8E13-DBC231881E02.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Hadoop </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>README</title>
+      <link href="/1VWTGBN/"/>
+      <url>/1VWTGBN/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/MOBIN/p/4647556.html">HBase的基本操作</a></p><p><a href="https://zhuanlan.zhihu.com/p/145551967">https://zhuanlan.zhihu.com/p/145551967</a></p><p><a href="https://juejin.cn/post/6844903959585374221">https://juejin.cn/post/6844903959585374221</a></p><p><a href="https://blog.csdn.net/HaixWang/article/details/89670432">Bulk Load——Spark 批量导入多列数据到HBase（scala&#x2F;Java）</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Hbase </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>因为truncate意外导致EditsLog错误，致使NameNode退出无法重启</title>
+      <link href="/60TGTQ/"/>
+      <url>/60TGTQ/</url>
+      
+        <content type="html"><![CDATA[<p>  简单来说就是在某种极端情况下，两个客户端对同一个块同时进行<code>close</code>和<code>truncate</code>操作导致<code>edit log</code>异常。</p><h2 id="场景举例-todo-："><a href="#场景举例-todo-：" class="headerlink" title="场景举例[todo]："></a>场景举例[todo]：</h2><p>Flink 使用BucketingSink 写Hdfs时，故障恢复的时候会对文件进行 truncate 截断操作。</p><h2 id="问题解释："><a href="#问题解释：" class="headerlink" title="问题解释："></a>问题解释：</h2><ol><li>ClientA 发送[<strong>关闭块</strong>]请求给NameNode, NN 处理完成, 释放文件锁.  但是尚未写入 edit log.<br> (此时文件大小: 100)</li><li>此时ClientB 发送[<strong>truncate</strong>]请求给NameNode, NN处理, 将文件截断, 写入edit log: <ol><li>truncate:  100 -&gt; 90</li><li>close:  now size 90</li></ol></li><li>ClientA的 close 请求写入edit log:<ol><li>close: now size 90</li></ol></li></ol><p>最终edit log:<br>    1. close块操作:  size: 90<br>    2. truncate操作: size: 100 -&gt; 90<br>    3. close 操作: size 90</p><p>所以在1-&gt;2的过程中出现了错误.</p><h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑:"></a>疑惑:</h2><ul><li><input disabled type="checkbox"> 为什么写第一个close操作到edit log的时候,  是获取最新的块大小, 而不是当时的块大小</li></ul><pre class="line-numbers language-mermaid" data-language="mermaid"><code class="language-mermaid"><span class="token keyword">sequenceDiagram</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考:"></a>参考:</h2><p><code>org.apache.hadoop.hdfs.server.namenode.FSNamesystem#setReplication</code><br><a href="https://issues.apache.org/jira/browse/HDFS-15391">Standby NameNode due loads the corruption edit log, the service exits and cannot be restarted </a><br><a href="https://issues.apache.org/jira/browse/HDFS-15175">Multiple CloseOp shared block instance causes the standby namenode to crash when rolling editlog</a><br><a href="https://blog.csdn.net/Androidlushangderen/article/details/106535484">基于RPC Call延时返回的HDFS异步editlog原理</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Hadoop </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>README</title>
+      <link href="/1VWTGBN/"/>
+      <url>/1VWTGBN/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://hudi.apache.org/docs/quick-start-guide.html">https://hudi.apache.org/docs/quick-start-guide.html</a></p><p><a href="https://hudi.apache.org/docs/writing_data.html">执行参数</a></p><p><a href="https://avro.apache.org/docs/current/spec.html#schema_complex">avro格式</a><br><a href="https://my.oschina.net/weikan/blog/708757">https://my.oschina.net/weikan/blog/708757</a></p><p>hudi-flink 连接kafka 需要测试</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Hudi </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>问题</title>
+      <link href="/25CTM7D/"/>
+      <url>/25CTM7D/</url>
+      
+        <content type="html"><![CDATA[<ul><li><input checked disabled type="checkbox"> 分区<ul><li>手动设置</li></ul></li><li><input checked disabled type="checkbox"> 主键<ul><li>手动设置</li></ul></li><li><input checked disabled type="checkbox"> 文件大小<ul><li><input checked disabled type="checkbox"> 文件数量</li><li>hoodie.parquet.max.file.size</li></ul></li><li><input checked disabled type="checkbox"> 查看</li><li><input disabled type="checkbox"> hive多种文件格式</li><li><input disabled type="checkbox"> 文件版本</li><li><input disabled type="checkbox"> insert 和 upsert 区别</li><li><input disabled type="checkbox"> ts区别</li><li><input disabled type="checkbox"> hive 的分区查询方式</li><li><input disabled type="checkbox"> 动态删分区的问题</li><li><input disabled type="checkbox"> commit记录清除</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Hudi </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>内存</title>
+      <link href="/1CKXRSG/"/>
+      <url>/1CKXRSG/</url>
+      
+        <content type="html"><![CDATA[<p>缓存一致性</p><p>问题:</p><ul><li>CPU乱序执行优化</li><li>JVM指令重排序</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> JVM </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>证明 scala 不能从外部调用内部函数</title>
+      <link href="/394TA36/"/>
+      <url>/394TA36/</url>
+      
+        <content type="html"><![CDATA[<p>一段代码</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">object <span class="token constant">ASD</span> <span class="token punctuation">&#123;</span>    def <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> <span class="token class-name">Array</span><span class="token punctuation">[</span><span class="token class-name">String</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">Unit</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>        def <span class="token function">f</span><span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token class-name">Any</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">Unit</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>            <span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>        <span class="token punctuation">&#125;</span>        <span class="token function">f</span><span class="token punctuation">(</span><span class="token string">"sfsfsfdsdfd"</span><span class="token punctuation">)</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如果我们想进行类似<code>ASD.main.f(xx)</code>或<code>ASD.f(xx)</code>的操作, 是否可行.<br>事实是残酷的, 它告诉我们不可行.</p><p>那么下面从反编译角度来探究为什么不可行:</p><p>首先我们打开编译后的 class 文件所在目录<br>有2个文件: <code>ASD.class</code>和<code>ASD$.class</code></p><p><strong>ASD.class 节选</strong></p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">ASD</span> <span class="token punctuation">&#123;</span>  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> paramArrayOfString<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token constant">ASD</span>$<span class="token punctuation">.</span><span class="token constant">MODULE</span>$<span class="token punctuation">.</span><span class="token function">main</span><span class="token punctuation">(</span>paramArrayOfString<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这个不重要</p><p><strong>ASD$.class 节选</strong></p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">ASD</span>$ <span class="token punctuation">&#123;</span>  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token constant">ASD</span>$ <span class="token constant">MODULE</span>$<span class="token punctuation">;</span>    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">void</span> f$<span class="token function">1</span><span class="token punctuation">(</span><span class="token class-name">Object</span> a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token class-name">Predef</span>$<span class="token punctuation">.</span><span class="token constant">MODULE</span>$<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">&#125;</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    f$<span class="token function">1</span><span class="token punctuation">(</span><span class="token string">"sfsfsfdsdfd"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">&#125;</span>    <span class="token keyword">private</span> <span class="token constant">ASD</span>$<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token constant">MODULE</span>$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>  <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>发现了吗, 内部函数 f 被编译为 私有的 final 方法f$1.</p><p>所以我们是无法从外部直接调用的.</p><p>但是理伦上我们是可以在 ASD 内部调用这个函数的.<br>是真的吗,你也是这么想的吗.<br>我们试试 <code>this.f$1(xxx)</code><br>但是很遗憾, </p><blockquote><p>value f$1 is not a member of object ASD<br>编译器看不懂我们意图, 甚至IDE都直接否决了我们的异想.</p></blockquote><p>那么我们就是要调用这个方法怎么办呢.<br>难道 javac 就注定要成为遥不可及的高冷存在吗.<br>我们难道就没有更进一步的发展了吗.</p><p>不, 伟大的 semi 酱告诉你,阻碍是不存在的.<br>“反射, JVM最大的外挂.”</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">val clazz <span class="token operator">=</span> <span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"scala.ASD$"</span><span class="token punctuation">)</span>val m <span class="token operator">=</span> clazz<span class="token punctuation">.</span><span class="token function">getDeclaredMethod</span><span class="token punctuation">(</span><span class="token string">"f$1"</span><span class="token punctuation">,</span> classOf<span class="token punctuation">[</span><span class="token class-name">Object</span><span class="token punctuation">]</span><span class="token punctuation">)</span>val o <span class="token operator">=</span> clazz<span class="token punctuation">.</span><span class="token function">getDeclaredField</span><span class="token punctuation">(</span><span class="token string">"MODULE$"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>m<span class="token punctuation">.</span><span class="token function">setAccessible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>m<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span> <span class="token string">"234234234"</span><span class="token punctuation">.</span>asInstanceOf<span class="token punctuation">[</span><span class="token class-name">Object</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>わぁ、ありがとう、せみちゃん。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Scala </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript prototype（原型对象）</title>
+      <link href="/PFX68H/"/>
+      <url>/PFX68H/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.runoob.com/js/js-object-prototype.html">JavaScript prototype（原型对象）</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> network </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>内网穿透</title>
+      <link href="/2YN1E0P/"/>
+      <url>/2YN1E0P/</url>
+      
+        <content type="html"><![CDATA[<h3 id="常用的内网穿透方法："><a href="#常用的内网穿透方法：" class="headerlink" title="常用的内网穿透方法："></a>常用的内网穿透方法：</h3><ol><li><p>ssh隧道<br><code>ssh -fCNR 0.0.0.0:&lt;远程映射端口&gt;:localhost:&lt;本地监听端口&gt; root@&lt;远程主机&gt;</code><br><a href="http://linux.51yip.com/search/ssh">ssh 相关命令</a><br>为了让ssh连接稳定，断线重连。可以使用 <a href="https://github.com/islenbo/autossh">autossh</a></p></li><li><p>frp<br> <a href="https://github.com/fatedier/frp">frp</a><br> 猴子教程：</p><ol><li>下载对应版本<a href="https://github.com/fatedier/frp/releases/tag/v0.35.0">https://github.com/fatedier/frp/releases/tag/v0.35.0</a></li><li>解压打开目录</li><li>文件说明 <pre class="line-numbers language-none"><code class="language-none">frpc  客户端执行程序frps  服务端指定程序frpc.ini 客户端配置文件frps.ini 服务端配置文件 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li>配置运行。</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> network </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SSH</title>
+      <link href="/1W2N3PE/"/>
+      <url>/1W2N3PE/</url>
+      
+        <content type="html"><![CDATA[<h3 id="SSH-走sockes5代理"><a href="#SSH-走sockes5代理" class="headerlink" title="SSH 走sockes5代理"></a>SSH 走sockes5代理</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-o</span> <span class="token assign-left variable">ProxyCommand</span><span class="token operator">=</span><span class="token string">"nc -X 5 -x 127.0.0.1:1080 %h %p"</span> root@server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> network </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谈一谈网络编程学习经验</title>
+      <link href="/28X53SA/"/>
+      <url>/28X53SA/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://github.com/downloads/chenshuo/documents/LearningNetworkProgramming.pdf">谈一谈网络编程学习经验</a></p><p>[[JavaScript prototype（原型对象）]]</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> network </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Reactor模式</title>
+      <link href="/16PKXR1/"/>
+      <url>/16PKXR1/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/crazymakercircle/p/9833847.html">https://www.cnblogs.com/crazymakercircle/p/9833847.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>异步编程</title>
+      <link href="/23K3AS1/"/>
+      <url>/23K3AS1/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://segmentfault.com/a/1190000009455103">Akka系列（五）：Java和Scala中的Future</a></p><p><a href="https://docs.scala-lang.org/overviews/core/futures.html">FUTURES AND PROMISES</a><br><a href="https://zhuanlan.zhihu.com/p/144415625">Future&#x2F;Promise异步编程模式</a></p><p>应用:<br>js的异步<br>netty的异步<br>akka的异步</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>README</title>
+      <link href="/1VWTGBN/"/>
+      <url>/1VWTGBN/</url>
+      
+        <content type="html"><![CDATA[<p>flinkSQL 追加模式（toAppendStream）与缩进模式（toRetractStream）的区别<br><a href="https://blog.csdn.net/young_0609/article/details/109466857">https://blog.csdn.net/young_0609/article/details/109466857</a></p><p><a href="https://zhuanlan.zhihu.com/p/67560995">Apache Calcite 为什么能这么流行</a></p><p>javacc<br><a href="https://www.cnblogs.com/orlion/p/7096645.html">https://www.cnblogs.com/orlion/p/7096645.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> dict </category>
+          
+          <category> CS </category>
+          
+          <category> Flink </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何对 GitHub Action 调试工具: nektos/act 的 clone 阶段使用代理 </title>
+      <link href="/2QCSSGE/"/>
+      <url>/2QCSSGE/</url>
+      
+        <content type="html"><![CDATA[<p>github action 的执行阶段, 每一个 step 如果使用到了 github 上的开源action. 比如  </p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Create comment  <span class="token key atrule">uses</span><span class="token punctuation">:</span> peter<span class="token punctuation">-</span>evans/create<span class="token punctuation">-</span>or<span class="token punctuation">-</span>update<span class="token punctuation">-</span>comment@v2  <span class="token key atrule">with</span><span class="token punctuation">:</span>    <span class="token key atrule">issue-number</span><span class="token punctuation">:</span> <span class="token number">1</span>    <span class="token key atrule">body</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">        This is a multi-line test comment</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>那么这个时候本地执行 act 的话, act 会自动使用 https 方式 clone 对应的仓库.<br>这个操作本身没有任何问题, 但是问题就在于我们所处的地区网络环境.<br>有些地区克隆 https 的 GitHub 库几乎难以正常成功. 故初次下策.<br>查看了 act 的源码实现发现, 克隆操作是在本地进行, 而且使用了 go-git 这个库<br>根据 <a href="https://stackoverflow.com/questions/62380283/go-git-clone-through-proxy">https://stackoverflow.com/questions/62380283/go-git-clone-through-proxy</a> 找到了代理 go-git 的方案.<br>然后修改一下控制台参数的传入.  </p><p>最终实现参见: <a href="https://github.com/SuCicada/act-with-proxy">https://github.com/SuCicada/act-with-proxy</a><br>下载链接: <a href="https://github.com/SuCicada/act-with-proxy/releases/download/v0.2.26/act_Windows_x86_64.tar.gz">https://github.com/SuCicada/act-with-proxy/releases/download/v0.2.26/act_Windows_x86_64.tar.gz</a><br>目前只提供了 Windows 版. 其他环境可以手动编译. go 的编译还是很容易的.<br>使用举例:</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">act --git-proxy http://127.0.0.1:10809<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo 加入构建时间 (add build time)</title>
+      <link href="/RV1EKQ/"/>
+      <url>/RV1EKQ/</url>
+      
+        <content type="html"><![CDATA[<p>实现思路:<br>在执行<code>hexo generate</code>前用程序自动加入当前时间在 <code>_config.yml</code> 文件中.<br>然后在主题代码中的 页面代码文件中加入相应解析显示逻辑即可.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[记录] 2020/04/06</title>
+      <link href="/2HG4EDV/"/>
+      <url>/2HG4EDV/</url>
+      
+        <content type="html"><![CDATA[<ul><li>每日需要做的：</li></ul><ol><li>先将每个白板上的内容都念一遍。</li><li>每个晚上都要写一篇短篇感想文章。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> datelog </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[记录] 2020/04/05</title>
+      <link href="/X0PT01/"/>
+      <url>/X0PT01/</url>
+      
+        <content type="html"><![CDATA[<p>我应该跳出现在。我又犯了个错误，我沉溺于当下，忘记了我应该去做什么。<br>我不能沉溺于无用的事情，让他侵蚀我，侵蚀我的思想，侵蚀我的精神，侵蚀我的时间。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[记录] 2020/04/03</title>
+      <link href="/39PHK9M/"/>
+      <url>/39PHK9M/</url>
+      
+        <content type="html"><![CDATA[<p>晚上任务</p><ul><li>给孟卓找软件测试报告</li></ul><p>今日言</p><ul><li>苦痛使人专注（心理），但是不能长久（指天），因为消耗很大，而且不稳定，没有上升的退路。<br>所以这就需要很大的目的性才行。即目标。他妈的。</li></ul><p>今日话</p><ul><li>和在校相比，哪个好呢<br>    - 现在好</li></ul><p>周末任务</p><ul><li>需要一个短句集合，博客来一篇记录一句，太臃肿</li><li>人生属性项，用作决策评估判定</li><li>刷课</li><li>测试纯纯写作或 修改hexoeditor</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
